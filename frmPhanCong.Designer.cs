@@ -29,16 +29,14 @@ namespace QLHSTHPT
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhanCong));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.buttonItemTimKiem = new DevComponents.DotNetBar.ButtonItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhanCong));
             this.label6 = new System.Windows.Forms.Label();
             this.chkTimTheoTenGV = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.chkTimTheoTenLop = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.btnTimKiem = new DevComponents.DotNetBar.ButtonX();
             this.navPanelTimKiem = new DevComponents.DotNetBar.NavigationPanePanel();
             this.txtTimKiem = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.buttonItemNhapDuLieu = new DevComponents.DotNetBar.ButtonItem();
             this.btnLuuVaoDS = new DevComponents.DotNetBar.ButtonX();
             this.btnThemNamHoc = new DevComponents.DotNetBar.ButtonX();
             this.btnThemLop = new DevComponents.DotNetBar.ButtonX();
@@ -70,6 +68,8 @@ namespace QLHSTHPT
             this.colMaLop = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colMaMonHoc = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colMaGiaoVien = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.buttonItemNhapDuLieu = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItemTimKiem = new DevComponents.DotNetBar.ButtonItem();
             this.navPanelTimKiem.SuspendLayout();
             this.navPanelNhapDuLieu.SuspendLayout();
             this.navPaneLeft.SuspendLayout();
@@ -77,14 +77,6 @@ namespace QLHSTHPT
             ((System.ComponentModel.ISupportInitialize)(this.ctxMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVPhanCong)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonItemTimKiem
-            // 
-            this.buttonItemTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("buttonItemTimKiem.Image")));
-            this.buttonItemTimKiem.ImageFixedSize = new System.Drawing.Size(16, 16);
-            this.buttonItemTimKiem.Name = "buttonItemTimKiem";
-            this.buttonItemTimKiem.OptionGroup = "navBar";
-            this.buttonItemTimKiem.Text = "Tìm kiếm thông tin";
             // 
             // label6
             // 
@@ -163,15 +155,6 @@ namespace QLHSTHPT
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(213, 22);
             this.txtTimKiem.TabIndex = 3;
-            // 
-            // buttonItemNhapDuLieu
-            // 
-            this.buttonItemNhapDuLieu.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItemNhapDuLieu.Checked = true;
-            this.buttonItemNhapDuLieu.Image = ((System.Drawing.Image)(resources.GetObject("buttonItemNhapDuLieu.Image")));
-            this.buttonItemNhapDuLieu.Name = "buttonItemNhapDuLieu";
-            this.buttonItemNhapDuLieu.OptionGroup = "navBar";
-            this.buttonItemNhapDuLieu.Text = "Nhập liệu thông tin";
             // 
             // btnLuuVaoDS
             // 
@@ -556,6 +539,23 @@ namespace QLHSTHPT
             this.colMaGiaoVien.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colMaGiaoVien.Width = 160;
             // 
+            // buttonItemNhapDuLieu
+            // 
+            this.buttonItemNhapDuLieu.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItemNhapDuLieu.Checked = true;
+            this.buttonItemNhapDuLieu.Image = ((System.Drawing.Image)(resources.GetObject("buttonItemNhapDuLieu.Image")));
+            this.buttonItemNhapDuLieu.Name = "buttonItemNhapDuLieu";
+            this.buttonItemNhapDuLieu.OptionGroup = "navBar";
+            this.buttonItemNhapDuLieu.Text = "Nhập liệu thông tin";
+            // 
+            // buttonItemTimKiem
+            // 
+            this.buttonItemTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("buttonItemTimKiem.Image")));
+            this.buttonItemTimKiem.ImageFixedSize = new System.Drawing.Size(16, 16);
+            this.buttonItemTimKiem.Name = "buttonItemTimKiem";
+            this.buttonItemTimKiem.OptionGroup = "navBar";
+            this.buttonItemTimKiem.Text = "Tìm kiếm thông tin";
+            // 
             // frmPhanCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -565,6 +565,7 @@ namespace QLHSTHPT
             this.Controls.Add(this.groupBoxDanhSach);
             this.Name = "frmPhanCong";
             this.Text = "PHÂN CÔNG";
+            this.Load += new System.EventHandler(this.frmPhanCong_Load);
             this.navPanelTimKiem.ResumeLayout(false);
             this.navPanelTimKiem.PerformLayout();
             this.navPanelNhapDuLieu.ResumeLayout(false);

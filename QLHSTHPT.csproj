@@ -51,13 +51,105 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bussiness\DanTocInfo.cs" />
+    <Compile Include="Bussiness\DiemInfo.cs" />
+    <Compile Include="Bussiness\GiaoVienInfo.cs" />
+    <Compile Include="Bussiness\HanhKiemInfo.cs" />
+    <Compile Include="Bussiness\HocKyInfo.cs" />
+    <Compile Include="Bussiness\HocLucInfo.cs" />
+    <Compile Include="Bussiness\HocSinhInfo.cs" />
+    <Compile Include="Bussiness\KetQuaInfo.cs" />
+    <Compile Include="Bussiness\KhoiLopInfo.cs" />
+    <Compile Include="Bussiness\KQCaNamMonHocInfo.cs" />
+    <Compile Include="Bussiness\KQCaNamTongHopInfo.cs" />
+    <Compile Include="Bussiness\KQHocKyMonHocInfo.cs" />
+    <Compile Include="Bussiness\KQHocKyTongHopInfo.cs" />
+    <Compile Include="Bussiness\LoaiDiemInfo.cs" />
+    <Compile Include="Bussiness\LoaiNguoiDungInfo.cs" />
+    <Compile Include="Bussiness\LopInfo.cs" />
+    <Compile Include="Bussiness\MonHocInfo.cs" />
+    <Compile Include="Bussiness\NamHocInfo.cs" />
+    <Compile Include="Bussiness\NgheNghiepInfo.cs" />
+    <Compile Include="Bussiness\NguoiDungInfo.cs" />
+    <Compile Include="Bussiness\PhanCongInfo.cs" />
+    <Compile Include="Bussiness\PhanLopInfo.cs" />
+    <Compile Include="Bussiness\QuyDinhInfo.cs" />
+    <Compile Include="Bussiness\TonGiaoInfo.cs" />
+    <Compile Include="Component\CalendarColumn.cs" />
+    <Compile Include="Component\Cursors.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\DataService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Component\frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Component\frmDangNhap.Designer.cs" />
+    <Compile Include="Component\frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Component\frmDoiMatKhau.Designer.cs" />
+    <Compile Include="Component\frmQuyDinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Component\frmQuyDinh.Designer.cs" />
+    <Compile Include="Component\Utilities.cs" />
     <Compile Include="Connetion.cs" />
+    <Compile Include="Controller\DanTocCtrl.cs" />
+    <Compile Include="Controller\GiaoVienCtrl.cs" />
+    <Compile Include="Controller\HocSinhCtrl.cs" />
+    <Compile Include="Controller\LoaiNguoiDungCtrl.cs" />
+    <Compile Include="Controller\LopCtrl.cs" />
+    <Compile Include="Controller\MonHocCtrl.cs" />
+    <Compile Include="Controller\NamHocCtrl.cs" />
+    <Compile Include="Controller\NgheNghiepCtrl.cs" />
+    <Compile Include="Controller\NguoiDungCtrl.cs" />
+    <Compile Include="Controller\PhanCongCtrl.cs" />
+    <Compile Include="Controller\QuyDinhCtrl.cs" />
+    <Compile Include="Controller\TonGiaoCtrl.cs" />
     <Compile Include="DangNhap.cs" />
+    <Compile Include="DataLayer\DanTocData.cs" />
+    <Compile Include="DataLayer\GiaoVienData.cs" />
+    <Compile Include="DataLayer\HocSinhData.cs" />
+    <Compile Include="DataLayer\LoaiNguoiDungData.cs" />
+    <Compile Include="DataLayer\LopData.cs" />
+    <Compile Include="DataLayer\MonHocData.cs" />
+    <Compile Include="DataLayer\NamHocData.cs" />
+    <Compile Include="DataLayer\NgheNghiepData.cs" />
+    <Compile Include="DataLayer\NguoiDungData.cs" />
+    <Compile Include="DataLayer\PhanCongData.cs" />
+    <Compile Include="DataLayer\QuyDinhData.cs" />
+    <Compile Include="DataLayer\TonGiaoData.cs" />
     <Compile Include="DoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DoiMatKhau.Designer.cs">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGiaoVien.Designer.cs">
+      <DependentUpon>frmGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHocSinh.Designer.cs">
+      <DependentUpon>frmHocSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoaiNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoaiNguoiDung.Designer.cs">
+      <DependentUpon>frmLoaiNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLop.Designer.cs">
+      <DependentUpon>frmLop.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPhanCong.cs">
       <SubType>Form</SubType>
@@ -70,6 +162,18 @@
     </Compile>
     <Compile Include="frmQuyDinh.Designer.cs">
       <DependentUpon>frmQuyDinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimKiemGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimKiemGV.Designer.cs">
+      <DependentUpon>frmTimKiemGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimKiemHS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimKiemHS.Designer.cs">
+      <DependentUpon>frmTimKiemHS.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -92,8 +196,17 @@
     <Compile Include="ThemTaiKhoan.Designer.cs">
       <DependentUpon>ThemTaiKhoan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Component\frmDangNhap.resx" />
+    <EmbeddedResource Include="Component\frmDoiMatKhau.resx" />
+    <EmbeddedResource Include="Component\frmQuyDinh.resx" />
     <EmbeddedResource Include="DoiMatKhau.resx">
       <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGiaoVien.resx">
+      <DependentUpon>frmGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHocSinh.resx">
+      <DependentUpon>frmHocSinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhanCong.resx">
       <DependentUpon>frmPhanCong.cs</DependentUpon>
@@ -138,5 +251,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources\HR_ESS.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

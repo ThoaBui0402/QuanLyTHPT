@@ -30,6 +30,10 @@ namespace QLHSTHPT
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textMaLoai = new System.Windows.Forms.ComboBox();
+            this.textTenND = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX6 = new DevComponents.DotNetBar.LabelX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.btnThemMoi = new DevComponents.DotNetBar.ButtonX();
@@ -41,10 +45,6 @@ namespace QLHSTHPT
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.Tên = new DevComponents.DotNetBar.LabelX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.labelX6 = new DevComponents.DotNetBar.LabelX();
-            this.textTenND = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textMaLoai = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +73,48 @@ namespace QLHSTHPT
             this.groupBox1.Size = new System.Drawing.Size(589, 384);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // textMaLoai
+            // 
+            this.textMaLoai.FormattingEnabled = true;
+            this.textMaLoai.Items.AddRange(new object[] {
+            "LND001",
+            "LND002",
+            "LND003"});
+            this.textMaLoai.Location = new System.Drawing.Point(220, 116);
+            this.textMaLoai.Name = "textMaLoai";
+            this.textMaLoai.Size = new System.Drawing.Size(247, 24);
+            this.textMaLoai.TabIndex = 25;
+            // 
+            // textTenND
+            // 
+            // 
+            // 
+            // 
+            this.textTenND.Border.Class = "TextBoxBorder";
+            this.textTenND.Location = new System.Drawing.Point(220, 158);
+            this.textTenND.Margin = new System.Windows.Forms.Padding(4);
+            this.textTenND.Name = "textTenND";
+            this.textTenND.Size = new System.Drawing.Size(247, 22);
+            this.textTenND.TabIndex = 24;
+            // 
+            // labelX6
+            // 
+            this.labelX6.Location = new System.Drawing.Point(56, 154);
+            this.labelX6.Margin = new System.Windows.Forms.Padding(4);
+            this.labelX6.Name = "labelX6";
+            this.labelX6.Size = new System.Drawing.Size(135, 28);
+            this.labelX6.TabIndex = 23;
+            this.labelX6.Text = "Tên Người Dùng";
+            // 
+            // labelX1
+            // 
+            this.labelX1.Location = new System.Drawing.Point(56, 118);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(135, 28);
+            this.labelX1.TabIndex = 21;
+            this.labelX1.Text = "Mã Loại";
             // 
             // buttonX1
             // 
@@ -194,48 +236,6 @@ namespace QLHSTHPT
             this.Tên.TabIndex = 10;
             this.Tên.Text = "Mã Người Dùng";
             // 
-            // labelX1
-            // 
-            this.labelX1.Location = new System.Drawing.Point(56, 118);
-            this.labelX1.Margin = new System.Windows.Forms.Padding(4);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(135, 28);
-            this.labelX1.TabIndex = 21;
-            this.labelX1.Text = "Mã Loại";
-            // 
-            // labelX6
-            // 
-            this.labelX6.Location = new System.Drawing.Point(56, 154);
-            this.labelX6.Margin = new System.Windows.Forms.Padding(4);
-            this.labelX6.Name = "labelX6";
-            this.labelX6.Size = new System.Drawing.Size(135, 28);
-            this.labelX6.TabIndex = 23;
-            this.labelX6.Text = "Tên Người Dùng";
-            // 
-            // textTenND
-            // 
-            // 
-            // 
-            // 
-            this.textTenND.Border.Class = "TextBoxBorder";
-            this.textTenND.Location = new System.Drawing.Point(220, 158);
-            this.textTenND.Margin = new System.Windows.Forms.Padding(4);
-            this.textTenND.Name = "textTenND";
-            this.textTenND.Size = new System.Drawing.Size(247, 22);
-            this.textTenND.TabIndex = 24;
-            // 
-            // textMaLoai
-            // 
-            this.textMaLoai.FormattingEnabled = true;
-            this.textMaLoai.Items.AddRange(new object[] {
-            "LND001",
-            "LND002",
-            "LND003"});
-            this.textMaLoai.Location = new System.Drawing.Point(220, 116);
-            this.textMaLoai.Name = "textMaLoai";
-            this.textMaLoai.Size = new System.Drawing.Size(247, 24);
-            this.textMaLoai.TabIndex = 25;
-            // 
             // ThemTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -244,6 +244,7 @@ namespace QLHSTHPT
             this.Controls.Add(this.groupBox1);
             this.Name = "ThemTaiKhoan";
             this.Text = "Thêm Tài Khoản";
+            this.Load += new System.EventHandler(this.ThemTaiKhoan_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 

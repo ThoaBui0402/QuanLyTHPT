@@ -1,5 +1,4 @@
-﻿
-namespace QLHSTHPT
+﻿namespace QLHSTHPT
 {
     partial class frmHocSinh
     {
@@ -30,9 +29,31 @@ namespace QLHSTHPT
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHocSinh));
+            this.groupBoxDanhSach = new System.Windows.Forms.GroupBox();
+
+            this.ctxMenu = new DevComponents.DotNetBar.ContextMenuBar();
+            this.btnMenu = new DevComponents.DotNetBar.ButtonItem();
+            this.btnAdd = new DevComponents.DotNetBar.ButtonItem();
+            this.btnRefesh = new DevComponents.DotNetBar.ButtonItem();
+            this.btnDelete = new DevComponents.DotNetBar.ButtonItem();
+            this.btnSave = new DevComponents.DotNetBar.ButtonItem();
+            this.btnClose = new DevComponents.DotNetBar.ButtonItem();
+            this.dGVHocSinh = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.colMaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGioiTinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.colNgaySinh = new QLHSTHPT.Component.CalendarColumn();
+            this.colNoiSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaDanToc = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colMaTonGiao = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colHoTenCha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaNNghiepCha = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colHoTenMe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaNNghiepMe = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.bindingNavigatorHocSinh = new System.Windows.Forms.BindingNavigator(this.components);
             this.navPaneLeft = new DevComponents.DotNetBar.NavigationPane();
             this.navPanelNhapDuLieu = new DevComponents.DotNetBar.NavigationPanePanel();
             this.groupPanelGioiTinh = new DevComponents.DotNetBar.Controls.GroupPanel();
@@ -66,51 +87,244 @@ namespace QLHSTHPT
             this.txtNoiSinh = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtTenHocSinh = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtGioiTinh = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.buttonItemNhapDuLieu = new DevComponents.DotNetBar.ButtonItem();
             this.navPanelTimKiem = new DevComponents.DotNetBar.NavigationPanePanel();
             this.label01 = new System.Windows.Forms.Label();
             this.chkTimTheoTen = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.chkTimTheoMa = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.btnTimKiem = new DevComponents.DotNetBar.ButtonX();
             this.txtTimKiem = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.bindingNavigatorHocSinh = new System.Windows.Forms.BindingNavigator(this.components);
-            this.btnSave = new DevComponents.DotNetBar.ButtonItem();
-            this.btnDelete = new DevComponents.DotNetBar.ButtonItem();
-            this.btnRefesh = new DevComponents.DotNetBar.ButtonItem();
-            this.btnAdd = new DevComponents.DotNetBar.ButtonItem();
-            this.btnMenu = new DevComponents.DotNetBar.ButtonItem();
-            this.btnClose = new DevComponents.DotNetBar.ButtonItem();
-            this.ctxMenu = new DevComponents.DotNetBar.ContextMenuBar();
-            this.dGVHocSinh = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.colMaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGioiTinh = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.colNoiSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaDanToc = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colMaTonGiao = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colHoTenCha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaNNghiepCha = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colHoTenMe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBoxDanhSach = new System.Windows.Forms.GroupBox();
-            this.buttonItemNhapDuLieu = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItemTimKiem = new DevComponents.DotNetBar.ButtonItem();
+            this.groupBoxDanhSach.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ctxMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVHocSinh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorHocSinh)).BeginInit();
             this.navPaneLeft.SuspendLayout();
             this.navPanelNhapDuLieu.SuspendLayout();
             this.groupPanelGioiTinh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpNgaySinh)).BeginInit();
             this.navPanelTimKiem.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorHocSinh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctxMenu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVHocSinh)).BeginInit();
-            this.groupBoxDanhSach.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // groupBoxDanhSach
+            // 
+            this.groupBoxDanhSach.Controls.Add(this.ctxMenu);
+            this.groupBoxDanhSach.Controls.Add(this.dGVHocSinh);
+            this.groupBoxDanhSach.Controls.Add(this.bindingNavigatorHocSinh);
+            this.groupBoxDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxDanhSach.Location = new System.Drawing.Point(260, 0);
+            this.groupBoxDanhSach.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBoxDanhSach.Name = "groupBoxDanhSach";
+            this.groupBoxDanhSach.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBoxDanhSach.Size = new System.Drawing.Size(732, 576);
+            this.groupBoxDanhSach.TabIndex = 3;
+            this.groupBoxDanhSach.TabStop = false;
+            this.groupBoxDanhSach.Text = "Danh sách học sinh";
+
+            // 
+            // ctxMenu
+            // 
+            this.ctxMenu.DockSide = DevComponents.DotNetBar.eDockSide.Document;
+            this.ctxMenu.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnMenu});
+            this.ctxMenu.Location = new System.Drawing.Point(332, 250);
+            this.ctxMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.ctxMenu.Name = "ctxMenu";
+            this.ctxMenu.Size = new System.Drawing.Size(100, 29);
+            this.ctxMenu.Stretch = true;
+            this.ctxMenu.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.ctxMenu.TabIndex = 4;
+            this.ctxMenu.TabStop = false;
+            this.ctxMenu.Text = "ctxMenu";
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.AutoExpandOnClick = true;
+            this.btnMenu.ImagePaddingHorizontal = 8;
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(2);
+            this.btnMenu.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnAdd,
+            this.btnRefesh,
+            this.btnDelete,
+            this.btnSave,
+            this.btnClose});
+            this.btnMenu.Text = "Menu";
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.ImagePaddingHorizontal = 8;
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.Ins);
+            this.btnAdd.Text = "Thêm mới";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnRefesh
+            // 
+            this.btnRefesh.ImagePaddingHorizontal = 8;
+            this.btnRefesh.Name = "btnRefesh";
+            this.btnRefesh.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F5);
+            this.btnRefesh.Text = "Làm tươi danh dách";
+            this.btnRefesh.Click += new System.EventHandler(this.bindingNavigatorRefreshItem_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.ImagePaddingHorizontal = 8;
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.Del);
+            this.btnDelete.Text = "Xóa dòng được chọn";
+
+            // 
+            // btnSave
+            // 
+            this.btnSave.ImagePaddingHorizontal = 8;
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlS);
+            this.btnSave.Text = "Lưu danh sách";
+            this.btnSave.Click += new System.EventHandler(this.bindingNavigatorSaveItem_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.ImagePaddingHorizontal = 8;
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.AltF4);
+            this.btnClose.Text = "Đóng cửa sổ này";
+            this.btnClose.Click += new System.EventHandler(this.bindingNavigatorExitItem_Click);
+            // 
+            // dGVHocSinh
+            // 
+            this.dGVHocSinh.AllowUserToAddRows = false;
+            this.dGVHocSinh.AllowUserToResizeRows = false;
+            this.dGVHocSinh.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.dGVHocSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dGVHocSinh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colMaHocSinh,
+            this.colHoTen,
+            this.colGioiTinh,
+            this.colNgaySinh,
+            this.colNoiSinh,
+            this.colMaDanToc,
+            this.colMaTonGiao,
+            this.colHoTenCha,
+            this.colMaNNghiepCha,
+            this.colHoTenMe,
+            this.colMaNNghiepMe});
+            this.ctxMenu.SetContextMenuEx(this.dGVHocSinh, this.btnMenu);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGVHocSinh.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dGVHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dGVHocSinh.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dGVHocSinh.Location = new System.Drawing.Point(4, 62);
+            this.dGVHocSinh.Margin = new System.Windows.Forms.Padding(4);
+            this.dGVHocSinh.Name = "dGVHocSinh";
+            this.dGVHocSinh.Size = new System.Drawing.Size(724, 510);
+            this.dGVHocSinh.TabIndex = 5;
+            this.dGVHocSinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGVHocSinh_CellClick);
+            this.dGVHocSinh.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dGVHocSinh_DataError);
+            // 
+            // colMaHocSinh
+            // 
+            this.colMaHocSinh.DataPropertyName = "MaHocSinh";
+            this.colMaHocSinh.HeaderText = "Mã học sinh";
+            this.colMaHocSinh.MaxInputLength = 6;
+            this.colMaHocSinh.Name = "colMaHocSinh";
+            this.colMaHocSinh.Width = 80;
+            // 
+            // colHoTen
+            // 
+            this.colHoTen.DataPropertyName = "HoTen";
+            this.colHoTen.HeaderText = "Họ và tên";
+            this.colHoTen.MaxInputLength = 30;
+            this.colHoTen.Name = "colHoTen";
+            this.colHoTen.Width = 150;
+            // 
+            // colGioiTinh
+            // 
+            this.colGioiTinh.DataPropertyName = "GioiTinh";
+            this.colGioiTinh.HeaderText = "Giới tính nữ";
+            this.colGioiTinh.Name = "colGioiTinh";
+            this.colGioiTinh.Width = 70;
+            // 
+            // colNgaySinh
+            // 
+            this.colNgaySinh.DataPropertyName = "NgaySinh";
+            dataGridViewCellStyle3.Format = "dd/MM/yyyy";
+            this.colNgaySinh.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colNgaySinh.HeaderText = "Ngày sinh";
+            this.colNgaySinh.Name = "colNgaySinh";
+            this.colNgaySinh.Width = 85;
+            // 
+            // colNoiSinh
+            // 
+            this.colNoiSinh.DataPropertyName = "NoiSinh";
+            this.colNoiSinh.HeaderText = "Nơi sinh";
+            this.colNoiSinh.MaxInputLength = 50;
+            this.colNoiSinh.Name = "colNoiSinh";
+            this.colNoiSinh.Width = 150;
+            // 
+            // colMaDanToc
+            // 
+            this.colMaDanToc.DataPropertyName = "MaDanToc";
+            this.colMaDanToc.HeaderText = "Dân tộc";
+            this.colMaDanToc.Name = "colMaDanToc";
+            // 
+            // colMaTonGiao
+            // 
+            this.colMaTonGiao.DataPropertyName = "MaTonGiao";
+            this.colMaTonGiao.HeaderText = "Tôn giáo";
+            this.colMaTonGiao.Name = "colMaTonGiao";
+            // 
+            // colHoTenCha
+            // 
+            this.colHoTenCha.DataPropertyName = "HoTenCha";
+            this.colHoTenCha.HeaderText = "Họ tên cha";
+            this.colHoTenCha.MaxInputLength = 30;
+            this.colHoTenCha.Name = "colHoTenCha";
+            this.colHoTenCha.Width = 150;
+            // 
+            // colMaNNghiepCha
+            // 
+            this.colMaNNghiepCha.DataPropertyName = "MaNNghiepCha";
+            this.colMaNNghiepCha.HeaderText = "Nghề nghiệp cha";
+            this.colMaNNghiepCha.Name = "colMaNNghiepCha";
+            // 
+            // colHoTenMe
+            // 
+            this.colHoTenMe.DataPropertyName = "HoTenMe";
+            this.colHoTenMe.HeaderText = "Họ tên mẹ";
+            this.colHoTenMe.MaxInputLength = 30;
+            this.colHoTenMe.Name = "colHoTenMe";
+            this.colHoTenMe.Width = 150;
             // 
             // colMaNNghiepMe
             // 
             this.colMaNNghiepMe.DataPropertyName = "MaNNghiepMe";
             this.colMaNNghiepMe.HeaderText = "Nghề nghiệp mẹ";
-            this.colMaNNghiepMe.MinimumWidth = 6;
             this.colMaNNghiepMe.Name = "colMaNNghiepMe";
-            this.colMaNNghiepMe.Width = 125;
+            // 
+            // bindingNavigatorHocSinh
+            // 
+            this.bindingNavigatorHocSinh.AddNewItem = null;
+            this.bindingNavigatorHocSinh.AutoSize = false;
+            this.bindingNavigatorHocSinh.CountItem = null;
+            this.bindingNavigatorHocSinh.CountItemFormat = "của {0}";
+            this.bindingNavigatorHocSinh.DeleteItem = null;
+            this.bindingNavigatorHocSinh.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.bindingNavigatorHocSinh.Location = new System.Drawing.Point(4, 19);
+            this.bindingNavigatorHocSinh.MoveFirstItem = null;
+            this.bindingNavigatorHocSinh.MoveLastItem = null;
+            this.bindingNavigatorHocSinh.MoveNextItem = null;
+            this.bindingNavigatorHocSinh.MovePreviousItem = null;
+            this.bindingNavigatorHocSinh.Name = "bindingNavigatorHocSinh";
+            this.bindingNavigatorHocSinh.PositionItem = null;
+            this.bindingNavigatorHocSinh.Size = new System.Drawing.Size(724, 43);
+            this.bindingNavigatorHocSinh.TabIndex = 4;
             // 
             // navPaneLeft
             // 
@@ -128,9 +342,9 @@ namespace QLHSTHPT
             this.navPaneLeft.Name = "navPaneLeft";
             this.navPaneLeft.NavigationBarHeight = 68;
             this.navPaneLeft.Padding = new System.Windows.Forms.Padding(1);
-            this.navPaneLeft.Size = new System.Drawing.Size(259, 576);
+            this.navPaneLeft.Size = new System.Drawing.Size(260, 576);
             this.navPaneLeft.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.navPaneLeft.TabIndex = 4;
+            this.navPaneLeft.TabIndex = 0;
             // 
             // 
             // 
@@ -140,7 +354,7 @@ namespace QLHSTHPT
             this.navPaneLeft.TitlePanel.Location = new System.Drawing.Point(1, 1);
             this.navPaneLeft.TitlePanel.Margin = new System.Windows.Forms.Padding(4);
             this.navPaneLeft.TitlePanel.Name = "panelTitle";
-            this.navPaneLeft.TitlePanel.Size = new System.Drawing.Size(257, 30);
+            this.navPaneLeft.TitlePanel.Size = new System.Drawing.Size(258, 30);
             this.navPaneLeft.TitlePanel.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.navPaneLeft.TitlePanel.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
             this.navPaneLeft.TitlePanel.Style.Border = DevComponents.DotNetBar.eBorderType.RaisedInner;
@@ -156,6 +370,7 @@ namespace QLHSTHPT
             // 
             this.navPanelNhapDuLieu.AutoScroll = true;
             this.navPanelNhapDuLieu.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+
             this.navPanelNhapDuLieu.Controls.Add(this.groupPanelGioiTinh);
             this.navPanelNhapDuLieu.Controls.Add(this.lblBuffer);
             this.navPanelNhapDuLieu.Controls.Add(this.dtpNgaySinh);
@@ -190,7 +405,7 @@ namespace QLHSTHPT
             this.navPanelNhapDuLieu.Margin = new System.Windows.Forms.Padding(4);
             this.navPanelNhapDuLieu.Name = "navPanelNhapDuLieu";
             this.navPanelNhapDuLieu.ParentItem = this.buttonItemNhapDuLieu;
-            this.navPanelNhapDuLieu.Size = new System.Drawing.Size(257, 476);
+            this.navPanelNhapDuLieu.Size = new System.Drawing.Size(258, 476);
             this.navPanelNhapDuLieu.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navPanelNhapDuLieu.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.navPanelNhapDuLieu.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -301,7 +516,6 @@ namespace QLHSTHPT
             this.dtpNgaySinh.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
             this.dtpNgaySinh.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.dtpNgaySinh.MonthCalendar.TodayButtonVisible = true;
-            this.dtpNgaySinh.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(133, 22);
             this.dtpNgaySinh.TabIndex = 5;
@@ -316,6 +530,7 @@ namespace QLHSTHPT
             this.btnLuuVaoDS.Size = new System.Drawing.Size(213, 28);
             this.btnLuuVaoDS.TabIndex = 17;
             this.btnLuuVaoDS.Text = "Lưu vào danh sách";
+            this.btnLuuVaoDS.Click += new System.EventHandler(this.btnLuuVaoDS_Click);
             // 
             // btnThemNNMe
             // 
@@ -326,6 +541,7 @@ namespace QLHSTHPT
             this.btnThemNNMe.Name = "btnThemNNMe";
             this.btnThemNNMe.Size = new System.Drawing.Size(27, 25);
             this.btnThemNNMe.TabIndex = 16;
+            this.btnThemNNMe.Click += new System.EventHandler(this.btnThemNNMe_Click);
             // 
             // btnThemNNCha
             // 
@@ -336,6 +552,7 @@ namespace QLHSTHPT
             this.btnThemNNCha.Name = "btnThemNNCha";
             this.btnThemNNCha.Size = new System.Drawing.Size(27, 25);
             this.btnThemNNCha.TabIndex = 13;
+            this.btnThemNNCha.Click += new System.EventHandler(this.btnThemNNCha_Click);
             // 
             // btnThemDanToc
             // 
@@ -346,6 +563,7 @@ namespace QLHSTHPT
             this.btnThemDanToc.Name = "btnThemDanToc";
             this.btnThemDanToc.Size = new System.Drawing.Size(27, 25);
             this.btnThemDanToc.TabIndex = 8;
+            this.btnThemDanToc.Click += new System.EventHandler(this.btnThemDanToc_Click);
             // 
             // btnThemTonGiao
             // 
@@ -356,6 +574,7 @@ namespace QLHSTHPT
             this.btnThemTonGiao.Name = "btnThemTonGiao";
             this.btnThemTonGiao.Size = new System.Drawing.Size(27, 25);
             this.btnThemTonGiao.TabIndex = 10;
+            this.btnThemTonGiao.Click += new System.EventHandler(this.btnThemTonGiao_Click);
             // 
             // label02
             // 
@@ -593,6 +812,17 @@ namespace QLHSTHPT
             this.txtGioiTinh.Size = new System.Drawing.Size(72, 22);
             this.txtGioiTinh.TabIndex = 20;
             // 
+            // buttonItemNhapDuLieu
+            // 
+            this.buttonItemNhapDuLieu.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItemNhapDuLieu.Checked = true;
+            //this.buttonItemNhapDuLieu.Image = ((System.Drawing.Image)(resources.GetObject("buttonItemNhapDuLieu.Image")));
+            this.buttonItemNhapDuLieu.ImagePaddingHorizontal = 8;
+            this.buttonItemNhapDuLieu.Name = "buttonItemNhapDuLieu";
+            this.buttonItemNhapDuLieu.OptionGroup = "navBar";
+            this.buttonItemNhapDuLieu.Text = "Nhập liệu thông tin";
+
+            // 
             // navPanelTimKiem
             // 
             this.navPanelTimKiem.AutoScroll = true;
@@ -607,7 +837,7 @@ namespace QLHSTHPT
             this.navPanelTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.navPanelTimKiem.Name = "navPanelTimKiem";
             this.navPanelTimKiem.ParentItem = this.buttonItemTimKiem;
-            this.navPanelTimKiem.Size = new System.Drawing.Size(257, 506);
+            this.navPanelTimKiem.Size = new System.Drawing.Size(258, 506);
             this.navPanelTimKiem.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.navPanelTimKiem.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
             this.navPanelTimKiem.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
@@ -659,6 +889,7 @@ namespace QLHSTHPT
             this.btnTimKiem.Size = new System.Drawing.Size(227, 28);
             this.btnTimKiem.TabIndex = 6;
             this.btnTimKiem.Text = "Tìm kiếm";
+
             // 
             // txtTimKiem
             // 
@@ -672,225 +903,13 @@ namespace QLHSTHPT
             this.txtTimKiem.Size = new System.Drawing.Size(227, 22);
             this.txtTimKiem.TabIndex = 3;
             this.txtTimKiem.WatermarkText = "Nhập thông tin cần tìm vào đây";
-            // 
-            // bindingNavigatorHocSinh
-            // 
-            this.bindingNavigatorHocSinh.AddNewItem = null;
-            this.bindingNavigatorHocSinh.AutoSize = false;
-            this.bindingNavigatorHocSinh.CountItem = null;
-            this.bindingNavigatorHocSinh.CountItemFormat = "của {0}";
-            this.bindingNavigatorHocSinh.DeleteItem = null;
-            this.bindingNavigatorHocSinh.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.bindingNavigatorHocSinh.Location = new System.Drawing.Point(4, 19);
-            this.bindingNavigatorHocSinh.MoveFirstItem = null;
-            this.bindingNavigatorHocSinh.MoveLastItem = null;
-            this.bindingNavigatorHocSinh.MoveNextItem = null;
-            this.bindingNavigatorHocSinh.MovePreviousItem = null;
-            this.bindingNavigatorHocSinh.Name = "bindingNavigatorHocSinh";
-            this.bindingNavigatorHocSinh.PositionItem = null;
-            this.bindingNavigatorHocSinh.Size = new System.Drawing.Size(984, 43);
-            this.bindingNavigatorHocSinh.TabIndex = 4;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlS);
-            this.btnSave.Text = "Lưu danh sách";
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.Del);
-            this.btnDelete.Text = "Xóa dòng được chọn";
-            // 
-            // btnRefesh
-            // 
-            this.btnRefesh.Name = "btnRefesh";
-            this.btnRefesh.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F5);
-            this.btnRefesh.Text = "Làm tươi danh dách";
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.Ins);
-            this.btnAdd.Text = "Thêm mới";
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.AutoExpandOnClick = true;
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Shape = new DevComponents.DotNetBar.RoundRectangleShapeDescriptor(2);
-            this.btnMenu.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnAdd,
-            this.btnRefesh,
-            this.btnDelete,
-            this.btnSave,
-            this.btnClose});
-            this.btnMenu.Text = "Menu";
-            // 
-            // btnClose
-            // 
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.AltF4);
-            this.btnClose.Text = "Đóng cửa sổ này";
-            // 
-            // ctxMenu
-            // 
-            this.ctxMenu.DockSide = DevComponents.DotNetBar.eDockSide.Document;
-            this.ctxMenu.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnMenu});
-            this.ctxMenu.Location = new System.Drawing.Point(280, 117);
-            this.ctxMenu.Margin = new System.Windows.Forms.Padding(4);
-            this.ctxMenu.Name = "ctxMenu";
-            this.ctxMenu.Size = new System.Drawing.Size(100, 29);
-            this.ctxMenu.Stretch = true;
-            this.ctxMenu.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.ctxMenu.TabIndex = 4;
-            this.ctxMenu.TabStop = false;
-            this.ctxMenu.Text = "ctxMenu";
-            // 
-            // dGVHocSinh
-            // 
-            this.dGVHocSinh.AllowUserToAddRows = false;
-            this.dGVHocSinh.AllowUserToResizeRows = false;
-            this.dGVHocSinh.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.dGVHocSinh.ColumnHeadersHeight = 29;
-            this.dGVHocSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dGVHocSinh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colMaHocSinh,
-            this.colHoTen,
-            this.colGioiTinh,
-            this.colNoiSinh,
-            this.colMaDanToc,
-            this.colMaTonGiao,
-            this.colHoTenCha,
-            this.colMaNNghiepCha,
-            this.colHoTenMe,
-            this.colMaNNghiepMe});
-            this.ctxMenu.SetContextMenuEx(this.dGVHocSinh, this.btnMenu);
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGVHocSinh.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dGVHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dGVHocSinh.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dGVHocSinh.Location = new System.Drawing.Point(4, 62);
-            this.dGVHocSinh.Margin = new System.Windows.Forms.Padding(4);
-            this.dGVHocSinh.Name = "dGVHocSinh";
-            this.dGVHocSinh.RowHeadersWidth = 51;
-            this.dGVHocSinh.Size = new System.Drawing.Size(984, 510);
-            this.dGVHocSinh.TabIndex = 5;
-            // 
-            // colMaHocSinh
-            // 
-            this.colMaHocSinh.DataPropertyName = "MaHocSinh";
-            this.colMaHocSinh.HeaderText = "Mã học sinh";
-            this.colMaHocSinh.MaxInputLength = 6;
-            this.colMaHocSinh.MinimumWidth = 6;
-            this.colMaHocSinh.Name = "colMaHocSinh";
-            this.colMaHocSinh.Width = 80;
-            // 
-            // colHoTen
-            // 
-            this.colHoTen.DataPropertyName = "HoTen";
-            this.colHoTen.HeaderText = "Họ và tên";
-            this.colHoTen.MaxInputLength = 30;
-            this.colHoTen.MinimumWidth = 6;
-            this.colHoTen.Name = "colHoTen";
-            this.colHoTen.Width = 150;
-            // 
-            // colGioiTinh
-            // 
-            this.colGioiTinh.DataPropertyName = "GioiTinh";
-            this.colGioiTinh.HeaderText = "Giới tính nữ";
-            this.colGioiTinh.MinimumWidth = 6;
-            this.colGioiTinh.Name = "colGioiTinh";
-            this.colGioiTinh.Width = 70;
-            // 
-            // colNoiSinh
-            // 
-            this.colNoiSinh.DataPropertyName = "NoiSinh";
-            this.colNoiSinh.HeaderText = "Nơi sinh";
-            this.colNoiSinh.MaxInputLength = 50;
-            this.colNoiSinh.MinimumWidth = 6;
-            this.colNoiSinh.Name = "colNoiSinh";
-            this.colNoiSinh.Width = 150;
-            // 
-            // colMaDanToc
-            // 
-            this.colMaDanToc.DataPropertyName = "MaDanToc";
-            this.colMaDanToc.HeaderText = "Dân tộc";
-            this.colMaDanToc.MinimumWidth = 6;
-            this.colMaDanToc.Name = "colMaDanToc";
-            this.colMaDanToc.Width = 125;
-            // 
-            // colMaTonGiao
-            // 
-            this.colMaTonGiao.DataPropertyName = "MaTonGiao";
-            this.colMaTonGiao.HeaderText = "Tôn giáo";
-            this.colMaTonGiao.MinimumWidth = 6;
-            this.colMaTonGiao.Name = "colMaTonGiao";
-            this.colMaTonGiao.Width = 125;
-            // 
-            // colHoTenCha
-            // 
-            this.colHoTenCha.DataPropertyName = "HoTenCha";
-            this.colHoTenCha.HeaderText = "Họ tên cha";
-            this.colHoTenCha.MaxInputLength = 30;
-            this.colHoTenCha.MinimumWidth = 6;
-            this.colHoTenCha.Name = "colHoTenCha";
-            this.colHoTenCha.Width = 150;
-            // 
-            // colMaNNghiepCha
-            // 
-            this.colMaNNghiepCha.DataPropertyName = "MaNNghiepCha";
-            this.colMaNNghiepCha.HeaderText = "Nghề nghiệp cha";
-            this.colMaNNghiepCha.MinimumWidth = 6;
-            this.colMaNNghiepCha.Name = "colMaNNghiepCha";
-            this.colMaNNghiepCha.Width = 125;
-            // 
-            // colHoTenMe
-            // 
-            this.colHoTenMe.DataPropertyName = "HoTenMe";
-            this.colHoTenMe.HeaderText = "Họ tên mẹ";
-            this.colHoTenMe.MaxInputLength = 30;
-            this.colHoTenMe.MinimumWidth = 6;
-            this.colHoTenMe.Name = "colHoTenMe";
-            this.colHoTenMe.Width = 150;
-            // 
-            // groupBoxDanhSach
-            // 
-            this.groupBoxDanhSach.Controls.Add(this.ctxMenu);
-            this.groupBoxDanhSach.Controls.Add(this.dGVHocSinh);
-            this.groupBoxDanhSach.Controls.Add(this.bindingNavigatorHocSinh);
-            this.groupBoxDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxDanhSach.Location = new System.Drawing.Point(0, 0);
-            this.groupBoxDanhSach.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBoxDanhSach.Name = "groupBoxDanhSach";
-            this.groupBoxDanhSach.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBoxDanhSach.Size = new System.Drawing.Size(992, 576);
-            this.groupBoxDanhSach.TabIndex = 5;
-            this.groupBoxDanhSach.TabStop = false;
-            this.groupBoxDanhSach.Text = "Danh sách học sinh";
-            this.groupBoxDanhSach.Enter += new System.EventHandler(this.groupBoxDanhSach_Enter);
-            // 
-            // buttonItemNhapDuLieu
-            // 
-            this.buttonItemNhapDuLieu.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItemNhapDuLieu.Checked = true;
-            this.buttonItemNhapDuLieu.Image = ((System.Drawing.Image)(resources.GetObject("buttonItemNhapDuLieu.Image")));
-            this.buttonItemNhapDuLieu.Name = "buttonItemNhapDuLieu";
-            this.buttonItemNhapDuLieu.OptionGroup = "navBar";
-            this.buttonItemNhapDuLieu.Text = "Nhập liệu thông tin";
+
             // 
             // buttonItemTimKiem
             // 
-            this.buttonItemTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("buttonItemTimKiem.Image")));
+            //this.buttonItemTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("buttonItemTimKiem.Image")));
             this.buttonItemTimKiem.ImageFixedSize = new System.Drawing.Size(16, 16);
+            this.buttonItemTimKiem.ImagePaddingHorizontal = 8;
             this.buttonItemTimKiem.Name = "buttonItemTimKiem";
             this.buttonItemTimKiem.OptionGroup = "navBar";
             this.buttonItemTimKiem.Text = "Tìm kiếm thông tin";
@@ -900,11 +919,22 @@ namespace QLHSTHPT
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(992, 576);
-            this.Controls.Add(this.navPaneLeft);
+            this.ctxMenu.SetContextMenuEx(this, this.btnMenu);
             this.Controls.Add(this.groupBoxDanhSach);
+            this.Controls.Add(this.navPaneLeft);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmHocSinh";
-            this.Text = "frmHocSinh";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "HỌC SINH";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmHocSinh_Load);
+            this.groupBoxDanhSach.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ctxMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGVHocSinh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorHocSinh)).EndInit();
             this.navPaneLeft.ResumeLayout(false);
             this.navPanelNhapDuLieu.ResumeLayout(false);
             this.navPanelNhapDuLieu.PerformLayout();
@@ -912,76 +942,76 @@ namespace QLHSTHPT
             ((System.ComponentModel.ISupportInitialize)(this.dtpNgaySinh)).EndInit();
             this.navPanelTimKiem.ResumeLayout(false);
             this.navPanelTimKiem.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigatorHocSinh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctxMenu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVHocSinh)).EndInit();
-            this.groupBoxDanhSach.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridViewComboBoxColumn colMaNNghiepMe;
+        #region Components
+        private System.Windows.Forms.GroupBox groupBoxDanhSach;
+        private DevComponents.DotNetBar.ContextMenuBar ctxMenu;
+        private DevComponents.DotNetBar.ButtonItem btnMenu;
+        private DevComponents.DotNetBar.ButtonItem btnAdd;
+        private DevComponents.DotNetBar.ButtonItem btnDelete;
+        private DevComponents.DotNetBar.ButtonItem btnSave;
+        private DevComponents.DotNetBar.ButtonItem btnClose;
         private DevComponents.DotNetBar.NavigationPane navPaneLeft;
         private DevComponents.DotNetBar.NavigationPanePanel navPanelNhapDuLieu;
-        private DevComponents.DotNetBar.Controls.GroupPanel groupPanelGioiTinh;
-        private DevComponents.DotNetBar.Controls.CheckBoxX ckbGTinhNam;
-        private DevComponents.DotNetBar.Controls.CheckBoxX ckbGTinhNu;
-        private System.Windows.Forms.Label lblBuffer;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput dtpNgaySinh;
-        private DevComponents.DotNetBar.ButtonX btnLuuVaoDS;
-        private DevComponents.DotNetBar.ButtonX btnThemNNMe;
-        private DevComponents.DotNetBar.ButtonX btnThemNNCha;
-        private DevComponents.DotNetBar.ButtonX btnThemDanToc;
-        private DevComponents.DotNetBar.ButtonX btnThemTonGiao;
-        private System.Windows.Forms.Label label02;
-        private System.Windows.Forms.Label label04;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbNgheNghiepMe;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbNgheNghiepCha;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbDanToc;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbTonGiao;
-        private System.Windows.Forms.Label label03;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtMaHocSinh;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label08;
-        private System.Windows.Forms.Label label06;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label09;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtHoTenMe;
-        private System.Windows.Forms.Label label07;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtHoTenCha;
-        private System.Windows.Forms.Label label05;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtNoiSinh;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtTenHocSinh;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtGioiTinh;
         private DevComponents.DotNetBar.ButtonItem buttonItemNhapDuLieu;
         private DevComponents.DotNetBar.NavigationPanePanel navPanelTimKiem;
-        private System.Windows.Forms.Label label01;
+        private DevComponents.DotNetBar.ButtonItem buttonItemTimKiem;
+        private DevComponents.DotNetBar.ButtonX btnTimKiem;
+        private DevComponents.DotNetBar.ButtonX btnLuuVaoDS;
+        private DevComponents.DotNetBar.ButtonItem btnRefesh;
+        private DevComponents.DotNetBar.ButtonX btnThemNNCha;
+        private DevComponents.DotNetBar.ButtonX btnThemTonGiao;
+        private DevComponents.DotNetBar.ButtonX btnThemNNMe;
+        private DevComponents.DotNetBar.ButtonX btnThemDanToc;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dGVHocSinh;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtMaHocSinh;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtTenHocSinh;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtTimKiem;
         private DevComponents.DotNetBar.Controls.CheckBoxX chkTimTheoTen;
         private DevComponents.DotNetBar.Controls.CheckBoxX chkTimTheoMa;
-        private DevComponents.DotNetBar.ButtonX btnTimKiem;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtTimKiem;
-        private DevComponents.DotNetBar.ButtonItem buttonItemTimKiem;
-        private System.Windows.Forms.BindingNavigator bindingNavigatorHocSinh;
-        private DevComponents.DotNetBar.ButtonItem btnSave;
-        private DevComponents.DotNetBar.ButtonItem btnDelete;
-        private DevComponents.DotNetBar.ButtonItem btnRefesh;
-        private DevComponents.DotNetBar.ButtonItem btnAdd;
-        private DevComponents.DotNetBar.ButtonItem btnMenu;
-        private DevComponents.DotNetBar.ButtonItem btnClose;
-        private DevComponents.DotNetBar.ContextMenuBar ctxMenu;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dGVHocSinh;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtHoTenCha;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbNgheNghiepMe;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtHoTenMe;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtNoiSinh;
+        private DevComponents.DotNetBar.Controls.CheckBoxX ckbGTinhNu;
+        private DevComponents.DotNetBar.Controls.CheckBoxX ckbGTinhNam;
+        private DevComponents.DotNetBar.Controls.GroupPanel groupPanelGioiTinh;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtGioiTinh;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbDanToc;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbNgheNghiepCha;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbTonGiao;
+        private System.Windows.Forms.Label label02;
+        private System.Windows.Forms.Label label06;
+        private System.Windows.Forms.Label label05;
+        private System.Windows.Forms.Label label03;
+        private System.Windows.Forms.Label label04;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label09;
+        private System.Windows.Forms.Label label08;
+        private System.Windows.Forms.Label label07;
+        private System.Windows.Forms.Label lblBuffer;
+        private System.Windows.Forms.Label label01;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaHocSinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn colHoTen;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colGioiTinh;
+        private QLHSTHPT.Component.CalendarColumn colNgaySinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNoiSinh;
         private System.Windows.Forms.DataGridViewComboBoxColumn colMaDanToc;
         private System.Windows.Forms.DataGridViewComboBoxColumn colMaTonGiao;
         private System.Windows.Forms.DataGridViewTextBoxColumn colHoTenCha;
         private System.Windows.Forms.DataGridViewComboBoxColumn colMaNNghiepCha;
         private System.Windows.Forms.DataGridViewTextBoxColumn colHoTenMe;
-        private System.Windows.Forms.GroupBox groupBoxDanhSach;
+        private System.Windows.Forms.DataGridViewComboBoxColumn colMaNNghiepMe;
+        private DevComponents.Editors.DateTimeAdv.DateTimeInput dtpNgaySinh;
+        #endregion
+
+        private System.Windows.Forms.BindingNavigator bindingNavigatorHocSinh;
     }
 }

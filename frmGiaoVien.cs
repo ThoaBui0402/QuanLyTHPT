@@ -12,10 +12,11 @@ using System.Windows.Forms;
 
 namespace QLHSTHPT
 {
-    public partial class frmGiaoVien : Office2007Form
+    public partial class frmGiaoVien : Form
     {
         GiaoVienCtrl m_GiaoVienCtrl = new GiaoVienCtrl();
         MonHocCtrl m_MonHocCtrl = new MonHocCtrl();
+
         public frmGiaoVien()
         {
             InitializeComponent();
@@ -47,7 +48,7 @@ namespace QLHSTHPT
         }
 
 
-        private void btnLuuVaoDS_Click_1(object sender, EventArgs e)
+        private void btnLuuVaoDS_Click(object sender, EventArgs e)
         {
             if (txtMaGiaoVien.Text != null && txtTenGiaoVien.Text != null && txtDiaChi.Text != null && txtDienThoai.Text != null && cmbMonHoc.SelectedValue != null)
             {

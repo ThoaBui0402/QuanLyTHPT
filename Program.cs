@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLHSTHPT.Component;
 
 namespace QLHSTHPT
 {
@@ -14,9 +15,9 @@ namespace QLHSTHPT
         
         public static frmMain1 frMain_main;
         public static string usernamelogin = "";
-       
-           
-            static void Main()
+
+        [STAThread]
+        static void Main()
 
         {
             Connetion.ConnectDB();

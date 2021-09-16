@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGiaoVien));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBoxDanhSach = new System.Windows.Forms.GroupBox();
             this.ctxMenu = new DevComponents.DotNetBar.ContextMenuBar();
@@ -282,7 +284,7 @@
             this.btnLuuVaoDS.Size = new System.Drawing.Size(213, 28);
             this.btnLuuVaoDS.TabIndex = 8;
             this.btnLuuVaoDS.Text = "Lưu vào danh sách";
-            this.btnLuuVaoDS.Click += new System.EventHandler(this.btnLuuVaoDS_Click_1);
+            this.btnLuuVaoDS.Click += new System.EventHandler(this.btnLuuVaoDS_Click);
             // 
             // btnThemMonHoc
             // 
@@ -520,7 +522,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1159, 490);
+            this.ClientSize = new System.Drawing.Size(992, 576);
             this.ctxMenu.SetContextMenuEx(this, this.btnMenu);
             this.Controls.Add(this.groupBoxDanhSach);
             this.Controls.Add(this.navPaneLeft);
@@ -528,9 +530,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmGiaoVien";
+            this.Text = "frmGiaoVien";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GIÁO VIÊN";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmGiaoVien_Load);
             this.groupBoxDanhSach.ResumeLayout(false);

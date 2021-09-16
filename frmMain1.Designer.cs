@@ -29,6 +29,7 @@ namespace QLHSTHPT
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain1));
             this.btnTimKiemHS = new DevComponents.DotNetBar.ButtonItem();
             this.btnTimKiemGV = new DevComponents.DotNetBar.ButtonItem();
@@ -55,8 +56,10 @@ namespace QLHSTHPT
             this.ribbonTabItem1 = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar7 = new DevComponents.DotNetBar.RibbonBar();
+            this.ribbonBar8 = new DevComponents.DotNetBar.RibbonBar();
             this.btnNhanVien = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem10 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem14= new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar4 = new DevComponents.DotNetBar.RibbonBar();
             this.btnChucVu_Main = new DevComponents.DotNetBar.ButtonItem();
             this.bnt_hocsinh = new DevComponents.DotNetBar.ButtonItem();
@@ -186,8 +189,8 @@ namespace QLHSTHPT
             this.btnPhanCong.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnPhanCong.Name = "btnPhanCong";
             this.btnPhanCong.SplitButton = true;
-            this.btnPhanCong.Text = "Phân công";
             this.btnPhanCong.Tooltip = "Phân công";
+            this.btnPhanCong.Click += new System.EventHandler(this.btnPhanCong_Click);
             // 
             // btnHocSinh
             // 
@@ -383,6 +386,7 @@ namespace QLHSTHPT
             // 
             // ribbonPanel1
             // 
+            this.ribbonPanel1.Controls.Add(this.ribbonBar8);
             this.ribbonPanel1.Controls.Add(this.ribbonBar7);
             this.ribbonPanel1.Controls.Add(this.ribbonBar4);
             this.ribbonPanel1.Controls.Add(this.ribbonBar1);
@@ -440,7 +444,6 @@ namespace QLHSTHPT
             // 
             // 
             this.ribbonBar7.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonBar7.ItemClick += new System.EventHandler(this.ribbonBar7_ItemClick);
             // 
             // btnNhanVien
             // 
@@ -454,6 +457,47 @@ namespace QLHSTHPT
             this.buttonItem10.Name = "buttonItem10";
             this.buttonItem10.SubItemsExpandWidth = 14;
             this.buttonItem10.Text = "buttonItem10";
+            this.buttonItem10.Click += new System.EventHandler(this.btnNhanVien_Click);
+            // ribbonBar8
+            // 
+            this.ribbonBar8.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.ribbonBar8.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar8.ContainerControlProcessDialogKey = true;
+            this.ribbonBar8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ribbonBar8.DragDropSupport = true;
+            this.ribbonBar8.HorizontalItemAlignment = DevComponents.DotNetBar.eHorizontalItemsAlignment.Center;
+            this.ribbonBar8.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem14});
+            this.ribbonBar8.Location = new System.Drawing.Point(260, 0);
+            this.ribbonBar8.Margin = new System.Windows.Forms.Padding(4);
+            this.ribbonBar8.Name = "ribbonBar8";
+            this.ribbonBar8.Size = new System.Drawing.Size(125, 182);
+            this.ribbonBar8.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.ribbonBar8.TabIndex = 3;
+            this.ribbonBar8.Text = "Phân công";
+            // 
+            // 
+            // 
+            this.ribbonBar8.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar8.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // buttonItem14
+            // 
+            this.buttonItem14.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem1.Image")));
+            this.buttonItem14.Name = "buttonItem14";
+            this.buttonItem14.SubItemsExpandWidth = 0;
+            this.buttonItem14.Text = "buttonItem14";
+            this.buttonItem14.Click += new System.EventHandler(this.btnPhanCong_Click);
             // 
             // ribbonBar4
             // 
@@ -958,6 +1002,7 @@ namespace QLHSTHPT
         private DevComponents.DotNetBar.RibbonTabItem ribbonTabItem1;
         private DevComponents.DotNetBar.RibbonPanel ribbonPanel1;
         private DevComponents.DotNetBar.RibbonBar ribbonBar7;
+        private DevComponents.DotNetBar.RibbonBar ribbonBar8;
         private DevComponents.DotNetBar.ButtonItem btnNhanVien;
         private DevComponents.DotNetBar.RibbonBar ribbonBar4;
         private DevComponents.DotNetBar.ButtonItem btnChucVu_Main;
@@ -995,5 +1040,6 @@ namespace QLHSTHPT
         private DevComponents.DotNetBar.ButtonItem buttonItem13;
         private DevComponents.DotNetBar.ButtonItem buttonItem12;
         private DevComponents.DotNetBar.ButtonItem buttonItem11;
+        private DevComponents.DotNetBar.ButtonItem buttonItem14;
     }
 }

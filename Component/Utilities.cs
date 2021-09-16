@@ -5,8 +5,6 @@ using System.Xml;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using QLHSTHPT.Bussiness;
-//using QLHocSinhTHPT.Reports;
-using QLHSTHPT.Controller;
 using DevComponents.DotNetBar;
 using System.Collections.Generic;
 
@@ -146,7 +144,7 @@ namespace QLHSTHPT.Component
     {
         #region Fields
    //     public static frmAbout                  m_FrmAbout              = null;
-    //   public static frmConnection             m_FrmConnection         = null;
+      public static frmConnection             m_FrmConnection         = null;
         public static frmGiaoVien m_FrmGiaoVien           = null;
         public static frmHocSinh m_FrmHocSinh            = null;
         public static frmLop                    m_FrmLop                = null;
@@ -167,6 +165,16 @@ namespace QLHSTHPT.Component
 
         #region Ham goi hien form
         #region Menu start
+        public static void ShowFormKetNoi()
+        {
+            if (m_FrmConnection == null || m_FrmConnection.IsDisposed)
+            {
+                m_FrmConnection = new frmConnection();
+                m_FrmConnection.Show();
+            }
+            else
+                m_FrmConnection.Activate();
+        }
         public static void ShowFormLoaiNguoiDung()
         {
             if (m_FrmLoaiNguoiDung == null || m_FrmLoaiNguoiDung.IsDisposed)
@@ -251,7 +259,7 @@ namespace QLHSTHPT.Component
             if (m_FrmHocSinh == null || m_FrmHocSinh.IsDisposed)
             {
                 m_FrmHocSinh = new frmHocSinh();
-                m_FrmHocSinh.MdiParent = frmMain1.ActiveForm;
+                m_FrmHocSinh.MdiParent = m_FrmMain;
                 m_FrmHocSinh.Show();
             }
             else
@@ -283,7 +291,7 @@ namespace QLHSTHPT.Component
             if (m_FrmGiaoVien == null || m_FrmGiaoVien.IsDisposed)
             {
                 m_FrmGiaoVien = new frmGiaoVien();
-                m_FrmGiaoVien.MdiParent = frmMain1.ActiveForm;
+                m_FrmGiaoVien.MdiParent = m_FrmMain;
                 m_FrmGiaoVien.Show();
             }
             else
@@ -295,7 +303,7 @@ namespace QLHSTHPT.Component
             if (m_FrmPhanCong == null || m_FrmPhanCong.IsDisposed)
             {
                 m_FrmPhanCong = new frmPhanCong();
-                m_FrmPhanCong.MdiParent = frmMain1.ActiveForm;
+                m_FrmPhanCong.MdiParent = m_FrmMain;
                 m_FrmPhanCong.Show();
             }
             else

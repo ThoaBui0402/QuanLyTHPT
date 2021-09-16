@@ -30,6 +30,7 @@ namespace QLHSTHPT
         #region Load
         private void frmPhanCong_Load(object sender, EventArgs e)
         {
+
             m_NamHocCtrl.HienThiComboBox(cmbNamHoc);
             m_LopCtrl.HienThiComboBox(cmbLop);
             m_MonHocCtrl.HienThiComboBox(cmbMonHoc);

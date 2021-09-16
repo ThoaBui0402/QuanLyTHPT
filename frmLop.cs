@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QLHSTHPT
 {
-    public partial class frmPhanCong : Form
+    public partial class frmLop : Form
     {
-        public frmPhanCong()
+        public frmLop()
         {
             InitializeComponent();
-        }
-
-        private void frmPhanCong_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -64,7 +64,7 @@ namespace QLHSTHPT
             this.btnThoat.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnThoat.Location = new System.Drawing.Point(174, 207);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(104, 35);
+            this.btnThoat.Size = new System.Drawing.Size(125, 35);
             this.btnThoat.TabIndex = 21;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -76,7 +76,7 @@ namespace QLHSTHPT
             this.btnDN.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnDN.Location = new System.Drawing.Point(27, 207);
             this.btnDN.Name = "btnDN";
-            this.btnDN.Size = new System.Drawing.Size(104, 35);
+            this.btnDN.Size = new System.Drawing.Size(141, 35);
             this.btnDN.TabIndex = 20;
             this.btnDN.Text = "Đăng Nhập";
             this.btnDN.UseVisualStyleBackColor = true;
@@ -89,7 +89,7 @@ namespace QLHSTHPT
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(252, 22);
             this.txtMatKhau.TabIndex = 19;
-            this.txtMatKhau.Text = "123";
+            this.txtMatKhau.Text = "admin";
             this.txtMatKhau.UseSystemPasswordChar = true;
             // 
             // txtDanhNhap

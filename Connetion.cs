@@ -16,7 +16,7 @@ namespace QLHSTHPT
 
         public static void ConnectDB()
         {
-            conn = new SqlConnection(@"Data Source=DESKTOP-VPF0AQ3;Initial Catalog=QLHocSinhTHPT;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=localhost\SQLEXPRESS01;Initial Catalog=QLHocSinhTHPT;Integrated Security=True");
             conn.Open();
         }
 
@@ -31,8 +31,6 @@ namespace QLHSTHPT
 
                 using (SqlDataReader dataReader = command.ExecuteReader())
                 {
-
-
 
                     if (dataReader.Read() == true)
                     {

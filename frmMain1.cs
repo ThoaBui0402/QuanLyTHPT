@@ -129,5 +129,16 @@ namespace QLHSTHPT
             frmQuyDinh frm = new frmQuyDinh();
             frm.Show();
         }
+
+        private void buttonItem9_Click(object sender, EventArgs e)
+        {
+            frmHocSinh frm = new frmHocSinh();
+            frm.Show();
+        }
+
+        private void frmMain1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

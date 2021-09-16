@@ -30,5 +30,10 @@ namespace QLHSTHPT
         {
             this.Close();
         }
+
+        private void ThemTaiKhoan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

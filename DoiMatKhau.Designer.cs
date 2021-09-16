@@ -203,6 +203,7 @@ namespace QLHSTHPT
             this.Controls.Add(this.groupBox1);
             this.Name = "DoiMatKhau";
             this.Text = "Đổi Mật Khẩu";
+            this.Load += new System.EventHandler(this.DoiMatKhau_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 

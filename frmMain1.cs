@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLHSTHPT.Component;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -132,13 +133,17 @@ namespace QLHSTHPT
 
         private void buttonItem9_Click(object sender, EventArgs e)
         {
-            frmHocSinh frm = new frmHocSinh();
-            frm.Show();
+            ThamSo.ShowFormHocSinh();
         }
 
         private void frmMain1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void ribbonBar7_ItemClick(object sender, EventArgs e)
+        {
+            ThamSo.ShowFormGiaoVien();
         }
     }
 }

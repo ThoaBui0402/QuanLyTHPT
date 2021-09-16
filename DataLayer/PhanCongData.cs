@@ -33,30 +33,34 @@ namespace QLHSTHPT.DataLayer
         public void LuuPhanCong(String maNamHoc, String maLop, String maMonHoc, String maGiaoVien)
         {
             SqlCommand cmd = new SqlCommand("INSERT INTO PHANCONG VALUES(@maNamHoc, @maLop, @maMonHoc, @maGiaoVien)");
-            cmd.Parameters.Add("maNamHoc", SqlDbType.VarChar).Value     = maNamHoc;
-            cmd.Parameters.Add("maLop", SqlDbType.VarChar).Value        = maLop;
-            cmd.Parameters.Add("maMonHoc", SqlDbType.VarChar).Value     = maMonHoc;
-            cmd.Parameters.Add("maGiaoVien", SqlDbType.VarChar).Value   = maGiaoVien;
+            cmd.Parameters.Add("maNamHoc", SqlDbType.VarChar).Value = maNamHoc;
+            cmd.Parameters.Add("maLop", SqlDbType.VarChar).Value = maLop;
+            cmd.Parameters.Add("maMonHoc", SqlDbType.VarChar).Value = maMonHoc;
+            cmd.Parameters.Add("maGiaoVien", SqlDbType.VarChar).Value = maGiaoVien;
 
             m_PhanCongData.Load(cmd);
         }
 
-        public DataTable TimTheoTenLop(String ten)
+
+        public void SuaPhanCong(int STT, String maNamHoc, String maLop, String maMonHoc, String maGiaoVien)
         {
-            SqlCommand cmd = new SqlCommand("SELECT P.STT, P.MaNamHoc, P.MaLop, P.MaMonHoc, P.MaGiaoVien FROM PHANCONG P, LOP L WHERE P.MaLop = L.MaLop AND L.TenLop LIKE '%' + @ten + '%'");
-            cmd.Parameters.Add("ten", SqlDbType.NVarChar).Value = ten;
-
+            SqlCommand cmd = new SqlCommand("UPDATE PHANCONG SET maNamHoc=@maNamHoc,maLop=@maLop,maMonHoc=@maMonHoc, maGiaoVien=@maGiaoVien where STT=@STT");
+            cmd.Parameters.Add("STT", SqlDbType.Int).Value = STT;
+            cmd.Parameters.Add("maNamHoc", SqlDbType.VarChar).Value = maNamHoc;
+            cmd.Parameters.Add("maLop", SqlDbType.VarChar).Value = maLop;
+            cmd.Parameters.Add("maMonHoc", SqlDbType.VarChar).Value = maMonHoc;
+            cmd.Parameters.Add("maGiaoVien", SqlDbType.VarChar).Value = maGiaoVien;
             m_PhanCongData.Load(cmd);
-            return m_PhanCongData;
         }
 
-        public DataTable TimTheoTenGV(String ten)
+        public void XoaPhanCong(int STT)
         {
-            SqlCommand cmd = new SqlCommand("SELECT P.STT, P.MaNamHoc, P.MaLop, P.MaMonHoc, P.MaGiaoVien FROM PHANCONG P, GIAOVIEN G WHERE P.MaGiaoVien = G.MaGiaoVien AND G.TenGiaoVien LIKE '%' + @ten + '%'");
-            cmd.Parameters.Add("ten", SqlDbType.NVarChar).Value = ten;
+            SqlCommand cmd = new SqlCommand("DELETE FROM PHANCONG WHERE STT=@STT");
+            cmd.Parameters.Add("STT", SqlDbType.Int).Value = STT;
 
             m_PhanCongData.Load(cmd);
-            return m_PhanCongData;
         }
+
+
     }
 }

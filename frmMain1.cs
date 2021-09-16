@@ -133,7 +133,8 @@ namespace QLHSTHPT
 
         private void buttonItem9_Click(object sender, EventArgs e)
         {
-            ThamSo.ShowFormHocSinh();
+            frmHocSinh frm = new frmHocSinh();
+            frm.Show();
         }
 
         private void frmMain1_Load(object sender, EventArgs e)
@@ -143,7 +144,8 @@ namespace QLHSTHPT
 
         private void ribbonBar7_ItemClick(object sender, EventArgs e)
         {
-            ThamSo.ShowFormGiaoVien();
+            frmGiaoVien frm = new frmGiaoVien();
+            frm.Show();
         }
     }
 }

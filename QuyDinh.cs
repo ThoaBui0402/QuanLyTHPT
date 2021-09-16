@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -77,6 +78,19 @@ namespace QLHSTHPT
             this.m_SiSoCanDuoi = SiSoCanDuoi;
             this.m_TuoiCanDuoi = TuoiCanDuoi;
             this.m_TuoiCanTren = TuoiCanTren;
+        }
+        public Boolean KiemTraSiSo(int siSo)
+        {
+            DataService dS = new DataService();
+            dS.Load(new SqlCommand("SELECT SiSoCanDuoi, SiSoCanTren FROM QUYDINH"));
+
+            int siSoMin = Convert.ToInt32(dS.Rows[0]["SiSoCanDuoi"]);
+            int siSoMax = Convert.ToInt32(dS.Rows[0]["SiSoCanTren"]);
+
+            if (siSo >= siSoMin && siSo <= siSoMax)
+                return true;
+            else
+                return false;
         }
     }
 }

@@ -12,14 +12,6 @@ namespace QLHSTHPT.Controller
         PhanCongData m_PhanCongData = new PhanCongData();
 
         #region Do du lieu vao DataGridView
-        public void HienThi(DataGridView dGV)
-        {
-            BindingSource bS = new BindingSource();
-
-            bS.DataSource = m_PhanCongData.LayDsPhanCong();
-            dGV.DataSource = bS;
-        }
-
         public void HienThi(DataGridViewX dGV,
                             TextBoxX txtSTT,
                             ComboBoxEx cmbNamHoc,
@@ -44,7 +36,7 @@ namespace QLHSTHPT.Controller
 
             cmbGiaoVien.DataBindings.Clear();
             cmbGiaoVien.DataBindings.Add("SelectedValue", bS, "MaGiaoVien");
-            
+
             dGV.DataSource = bS;
         }
         #endregion
@@ -54,7 +46,7 @@ namespace QLHSTHPT.Controller
         {
             return m_PhanCongData.ThemDongMoi();
         }
-        
+
 
         public void ThemPhanCong(DataRow m_Row)
         {
@@ -72,18 +64,15 @@ namespace QLHSTHPT.Controller
         {
             m_PhanCongData.LuuPhanCong(maNamHoc, maLop, maMonHoc, maGiaoVien);
         }
-        #endregion
-
-        #region Tìm kiem
-        public void TimTheoTenLop(String m_TenLop)
+        public void SuaPhanCong(int STT, String maNamHoc, String maLop, String maMonHoc, String maGiaoVien)
         {
-            m_PhanCongData.TimTheoTenLop(m_TenLop);
+            m_PhanCongData.SuaPhanCong(STT, maNamHoc, maLop, maMonHoc, maGiaoVien);
         }
-
-        public void TimTheoTenGV(String m_TenGiaoVien)
+        public void XoaPhanCong(int STT)
         {
-            m_PhanCongData.TimTheoTenGV(m_TenGiaoVien);
+            m_PhanCongData.XoaPhanCong(STT);
         }
         #endregion
+
     }
 }

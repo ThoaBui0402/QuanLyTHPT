@@ -73,7 +73,7 @@ namespace QLHSTHPT.Controller
             bS.DataSource = m_HocSinhData.LayDsHocSinh();
 
             DataTable dT = m_HocSinhData.LayDsHocSinh();
-            bool gioiTinh = Convert.ToBoolean(dT.Rows[0]["GioiTinh"]);
+           bool gioiTinh = Convert.ToBoolean(dT.Rows[0]["GioiTinh"]);
 
             if (gioiTinh)
                 ckbGTinhNu.Checked = true;

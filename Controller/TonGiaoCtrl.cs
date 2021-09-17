@@ -16,7 +16,7 @@ namespace QLHSTHPT.Controller
         {
             comboBox.DataSource = m_TonGiaoData.LayDsTonGiao();
             comboBox.DisplayMember = "TenTonGiao";
-            comboBox.ValueMember = "MaTonGiao";
+           comboBox.ValueMember = "MaTonGiao";
         }
         #endregion
 

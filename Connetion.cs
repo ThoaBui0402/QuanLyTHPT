@@ -16,7 +16,7 @@ namespace QLHSTHPT
 
         public static void ConnectDB()
         {
-            conn = new SqlConnection(@"Data Source=localhost\SQLEXPRESS01;Initial Catalog=QLHocSinhTHPT;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=DESKTOP-J2GH96M\SQL15;Initial Catalog=QLHocSinhTHPT;Integrated Security=True");
             conn.Open();
         }
 

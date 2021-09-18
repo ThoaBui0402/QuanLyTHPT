@@ -1,0 +1,11 @@
+D:\ThucTapNhom\QuanLiTHPT\bin\Debug\QuanLiTHPT.exe.config
+D:\ThucTapNhom\QuanLiTHPT\bin\Debug\QuanLiTHPT.exe
+D:\ThucTapNhom\QuanLiTHPT\bin\Debug\QuanLiTHPT.pdb
+D:\ThucTapNhom\QuanLiTHPT\obj\Debug\QuanLiTHPT.csproj.AssemblyReference.cache
+D:\ThucTapNhom\QuanLiTHPT\obj\Debug\QuanLiTHPT.Form1.resources
+D:\ThucTapNhom\QuanLiTHPT\obj\Debug\QuanLiTHPT.frmDangNhap.resources
+D:\ThucTapNhom\QuanLiTHPT\obj\Debug\QuanLiTHPT.Properties.Resources.resources
+D:\ThucTapNhom\QuanLiTHPT\obj\Debug\QuanLiTHPT.csproj.GenerateResource.cache
+D:\ThucTapNhom\QuanLiTHPT\obj\Debug\QuanLiTHPT.csproj.CoreCompileInputs.cache
+D:\ThucTapNhom\QuanLiTHPT\obj\Debug\QuanLiTHPT.exe
+D:\ThucTapNhom\QuanLiTHPT\obj\Debug\QuanLiTHPT.pdb

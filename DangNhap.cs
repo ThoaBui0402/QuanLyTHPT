@@ -3,86 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace QLHSTHPT
+using System.Data;
+using System.Data.SqlClient;
+namespace QuanLiTHPT
 {
     class DangNhap
     {
-        private string MaDN;
-        private string MaLoai;
-        private string TenND;
-        private string TenDNnhap;
-        private string MatKhau;
-        
-
-        public string matKhau
+        public bool DangNhapHT(string Username, string Pass)
         {
-            get
-            {
-                return MatKhau;
-            }
+            string sql = "SELECT * FROM tblUser WHERE Username='" + Username + "' AND Password='" + Pass + "'";
+            SqlConnection con = new SqlConnection(ConnectDB.getconnect());
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(sql, con);
 
-            set
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
             {
-                MatKhau = value;
+                return true;
             }
-        }
-        public string maLoai
-        {
-            get
-            {
-                return MaLoai;
-            }
-
-            set
-            {
-                MaLoai = value;
-            }
-        }
-        public string tenDNnhap
-        {
-            get
-            {
-                return TenDNnhap;
-            }
-
-            set
-            {
-                TenDNnhap = value;
-            }
-        }
-        public string tenND
-        {
-            get
-            {
-                return TenND;
-            }
-
-            set
-            {
-                TenND = value;
-            }
-        }
-
-        public string maND
-        {
-            get
-            {
-                return MaDN;
-            }
-
-            set
-            {
-                MaDN = value;
-            }
-        }
-        public DangNhap(string MaDN, string MaLoai, string TenND, string TenDNhap, string MatKhau)
-        {
-            this.tenND = TenND;
-            this.MaDN = MaDN;
-            this.maLoai= MaLoai;
-            this.tenDNnhap = TenDNhap;
-            this.matKhau = MatKhau;
+            return false;
         }
     }
 }
+

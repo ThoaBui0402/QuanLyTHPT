@@ -1,1 +1,1 @@
-# QuanLyTHPT
+# QL_THPT

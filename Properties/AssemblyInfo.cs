@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("QLHSTHPT")]
+[assembly: AssemblyTitle("QuanLiTHPT")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("QLHSTHPT")]
+[assembly: AssemblyProduct("QuanLiTHPT")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b52280f3-e129-4e25-a6ae-14fde31d9309")]
+[assembly: Guid("07971b1c-9139-4cbd-b3d3-92ade065d4c6")]
 
 // Version information for an assembly consists of the following four values:
 //

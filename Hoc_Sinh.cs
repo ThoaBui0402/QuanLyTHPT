@@ -19,7 +19,7 @@ namespace QuanLiTHPT
         }
         HocSinh hs = new HocSinh();
         int chon;
-        //TimKiem tk = new TimKiem();
+        TimKiem tk = new TimKiem();
         public void KhoiTao()
         {
             txtHoTen_HS.Enabled = txtPhuHuynh.Enabled = cbGT_HS.Enabled = cbLop.Enabled = dtpNgaySinh_HS.Enabled = txtDiaChi.Enabled = false;
@@ -101,5 +101,12 @@ namespace QuanLiTHPT
             chon = 2;
         }
 
+        private void txtTK_HS_TextChanged(object sender, EventArgs e)
+        {
+            if (cbTK_HS.Text == "Mã")
+                dgvHocSinh.DataSource = tk.TK_Ma_HocSinh(txtTK_HS.Text);
+            else
+                dgvHocSinh.DataSource = tk.TKTenHocSinh(txtTK_HS.Text);
+        }
     }
 }

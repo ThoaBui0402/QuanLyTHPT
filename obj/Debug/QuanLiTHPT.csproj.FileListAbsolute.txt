@@ -32,3 +32,4 @@ D:\Ky1nam4\TTN\QuanLyTHPT\obj\Debug\QuanLiTHPT.csproj.CoreCompileInputs.cache
 D:\Ky1nam4\TTN\QuanLyTHPT\obj\Debug\QuanLiTHPT.exe
 D:\Ky1nam4\TTN\QuanLyTHPT\obj\Debug\QuanLiTHPT.pdb
 D:\Ky1nam4\TTN\QuanLyTHPT\obj\Debug\QuanLiTHPT.Giao_Vien.resources
+D:\Ky1nam4\TTN\QuanLyTHPT\obj\Debug\QuanLiTHPT.Hoc_Sinh.resources

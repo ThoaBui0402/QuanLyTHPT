@@ -149,7 +149,7 @@
             this.txtTKGV.Name = "txtTKGV";
             this.txtTKGV.Size = new System.Drawing.Size(235, 22);
             this.txtTKGV.TabIndex = 40;
-          //  this.txtTKGV.TextChanged += new System.EventHandler(this.txtTKGV_TextChanged);
+            this.txtTKGV.TextChanged += new System.EventHandler(this.txtTKGV_TextChanged);
             // 
             // cbTKGV
             // 
@@ -183,7 +183,6 @@
             this.btnXoa.TabIndex = 37;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
-     //       this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -194,7 +193,6 @@
             this.btnSua.TabIndex = 36;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
-       //     this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 

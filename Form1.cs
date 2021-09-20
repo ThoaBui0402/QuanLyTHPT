@@ -20,14 +20,14 @@ namespace QuanLiTHPT
 
         private void giáoViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-         //   Giao_Vien gv = new Giao_Vien();
-         //   gv.Show();
+            Giao_Vien gv = new Giao_Vien();
+            gv.Show();
         }
 
         private void họcSinhToolStripMenuItem_Click(object sender, EventArgs e)
         {
-         //   Hoc_Sinh hs = new Hoc_Sinh();
-         //   hs.Show();
+            Hoc_Sinh hs = new Hoc_Sinh();
+            hs.Show();
         }
 
         private void thôngTinGiảngDạyToolStripMenuItem_Click(object sender, EventArgs e)

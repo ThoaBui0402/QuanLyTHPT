@@ -142,7 +142,6 @@
             this.btnXoa_HS.TabIndex = 68;
             this.btnXoa_HS.Text = "Xóa";
             this.btnXoa_HS.UseVisualStyleBackColor = true;
-           // this.btnXoa_HS.Click += new System.EventHandler(this.btnXoa_HS_Click);
             // 
             // btnSua_HS
             // 
@@ -153,7 +152,6 @@
             this.btnSua_HS.TabIndex = 67;
             this.btnSua_HS.Text = "Sửa";
             this.btnSua_HS.UseVisualStyleBackColor = true;
-          //  this.btnSua_HS.Click += new System.EventHandler(this.btnSua_HS_Click);
             // 
             // btnThem_HS
             // 
@@ -330,7 +328,7 @@
             this.txtTK_HS.Name = "txtTK_HS";
             this.txtTK_HS.Size = new System.Drawing.Size(316, 22);
             this.txtTK_HS.TabIndex = 64;
-         //   this.txtTK_HS.TextChanged += new System.EventHandler(this.txtTK_HS_TextChanged_1);
+            this.txtTK_HS.TextChanged += new System.EventHandler(this.txtTK_HS_TextChanged);
             // 
             // cbTK_HS
             // 

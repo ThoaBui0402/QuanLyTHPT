@@ -108,7 +108,7 @@ namespace QuanLiTHPT
             this.hướngDẫnSửDụngToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(729, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1432, 28);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -117,17 +117,18 @@ namespace QuanLiTHPT
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label1.Location = new System.Drawing.Point(159, 233);
+            this.label1.Location = new System.Drawing.Point(489, 243);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(261, 37);
+            this.label1.Size = new System.Drawing.Size(462, 37);
             this.label1.TabIndex = 5;
-            this.label1.Text = "TRƯỜNG THPT";
+            this.label1.Text = "Hệ thống quản lý trường THPT";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 442);
+            this.ClientSize = new System.Drawing.Size(1432, 660);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";

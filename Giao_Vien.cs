@@ -18,6 +18,7 @@ namespace QuanLiTHPT
         }
         GiaoVien gv = new GiaoVien();
         int chon;
+        TimKiem tk = new TimKiem();
         public void KhoiTao()
         {
             txtHoTenGV.Enabled = txtLuong.Enabled = txtSDT.Enabled = cbGTGV.Enabled = cbMonHoc.Enabled = txtDiaChi.Enabled = false;
@@ -104,5 +105,12 @@ namespace QuanLiTHPT
             chon = 0;
         }
 
+        private void txtTKGV_TextChanged(object sender, EventArgs e)
+        {
+            if (cbTKGV.Text == "Mã")
+                dgvGiaoVien.DataSource = tk.TK_Ma_GiaoVien(txtTKGV.Text);
+            else
+                dgvGiaoVien.DataSource = tk.TKTenGiaoVien(txtTKGV.Text);
+        }
     }
 }

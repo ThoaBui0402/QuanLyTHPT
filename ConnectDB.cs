@@ -12,7 +12,7 @@ namespace QuanLiTHPT
         SqlConnection cn = new SqlConnection();
         static public String getconnect()
         {
-            return (@"Data Source=DESKTOP-J2GH96M\SQL15; Initial Catalog=TruongTHPT; Integrated Security=true");
+            return (@"Data Source=localhost\SQLEXPRESS01;Initial Catalog=TruongTHPT;Integrated Security=True");
         }
     }
 }

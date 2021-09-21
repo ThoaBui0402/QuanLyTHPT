@@ -112,5 +112,16 @@ namespace QuanLiTHPT
             else
                 dgvGiaoVien.DataSource = tk.TKTenGiaoVien(txtTKGV.Text);
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.Yes == MessageBox.Show("Bạn muốn xóa giáo viên này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+            {
+                gv.Xoa_GV(txtMaGV.Text);
+                MessageBox.Show("Xóa thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Giao_Vien_Load(sender, e);
+                SetNull();
+            }
+        }
     }
 }

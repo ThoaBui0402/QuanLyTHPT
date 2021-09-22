@@ -69,5 +69,25 @@ namespace QuanLiTHPT
             cmd.Dispose();
             con.Close();
         }
+        public void Sua_HS(string MaHS, string HoTen, string GT, string NgaySinh, string DiaChi, string PhuHuynh, string MaLop)
+        {
+            string sql = "Sua_HS";
+            SqlConnection con = new SqlConnection(ConnectDB.getconnect());
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@HovaTen", HoTen);
+            cmd.Parameters.AddWithValue("@GT", GT);
+            cmd.Parameters.AddWithValue("@NgaySinh", NgaySinh);
+            cmd.Parameters.AddWithValue("@DiaChi", DiaChi);
+            cmd.Parameters.AddWithValue("@PhuHuynh", PhuHuynh);
+            cmd.Parameters.AddWithValue("@MaLop", MaLop);
+            cmd.Parameters.AddWithValue("@MaHS", MaHS);
+
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
+        }
     }
 }

@@ -64,6 +64,27 @@ namespace QuanLiTHPT
             da.Fill(dt);
             return dt;
         }
+        public void Sua_GV(string MaGV, string HoTen, string GT, string NgaySinh, string DiaChi, string SDT, string Luong, string Mon)
+        {
+            string sql = "Sua_GV";
+            SqlConnection con = new SqlConnection(ConnectDB.getconnect());
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@MaGV", MaGV);
+            cmd.Parameters.AddWithValue("@HoTen", HoTen);
+            cmd.Parameters.AddWithValue("@GT", GT);
+            cmd.Parameters.AddWithValue("@NgaySinh", NgaySinh);
+            cmd.Parameters.AddWithValue("@DiaChi", DiaChi);
+            cmd.Parameters.AddWithValue("@SDT", int.Parse(SDT));
+            cmd.Parameters.AddWithValue("@Luong", int.Parse(Luong));
+            cmd.Parameters.AddWithValue("@MaMon", Mon);
+
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
+        }
         public void Xoa_GV(string MaGV)
         {
             string sql = "Xoa_GV";

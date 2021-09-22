@@ -58,7 +58,23 @@ namespace QuanLiTHPT
 
         private void btnLuu_HS_Click(object sender, EventArgs e)
         {
-           if (chon == 2)
+            if (chon == 1)
+            {
+                if (txtHoTen_HS.Text == "" || cbGT_HS.Text == "" || txtDiaChi.Text == "" || txtPhuHuynh.Text == "" || cbLop.Text == "" || dtpNgaySinh_HS.Text == "")
+                    MessageBox.Show("Mời nhập đầy đủ thông tin!");
+                else
+                {
+                    if (DialogResult.Yes == MessageBox.Show("Bạn có muốn sửa học sinh này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                    {
+                        hs.Sua_HS(txtMa_HS.Text, txtHoTen_HS.Text, cbGT_HS.Text, dtpNgaySinh_HS.Text, txtDiaChi.Text, txtPhuHuynh.Text, cbLop.SelectedValue.ToString());
+                        MessageBox.Show("Sửa thành công!");
+                        SetNull();
+                        Hoc_Sinh_Load(sender, e);
+                    }
+                }
+            }
+            else
+            if (chon == 2)
             {
                 if (txtHoTen_HS.Text == "" || cbGT_HS.Text == "" || txtDiaChi.Text == "" || txtPhuHuynh.Text == "" || cbLop.Text == "" || dtpNgaySinh_HS.Text == "")
                     MessageBox.Show("Mời nhập đầy đủ thông tin!");
@@ -119,6 +135,14 @@ namespace QuanLiTHPT
                 Hoc_Sinh_Load(sender, e);
                 SetNull();
             }
+        }
+
+        private void btnSua_HS_Click(object sender, EventArgs e)
+        {
+            Mo();
+            SetNull();
+            txtMa_HS.Enabled = false;
+            chon = 1;
         }
     }
 }

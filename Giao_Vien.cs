@@ -67,21 +67,34 @@ namespace QuanLiTHPT
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+
             if (chon == 1)
             {
-                if (chon == 2)
+                if (txtHoTenGV.Text == "" || cbGTGV.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == "" || cbMonHoc.Text == "" || dtpNgaySinhGV.Text == "" || txtLuong.Text == "")
+                    MessageBox.Show("Mời nhập đầy đủ thông tin!");
+                else
                 {
-                    if (txtHoTenGV.Text == "" || cbGTGV.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == "" || cbMonHoc.Text == "" || dtpNgaySinhGV.Text == "" || txtLuong.Text == "")
-                        MessageBox.Show("Mời nhập đầy đủ thông tin!");
-                    else
+                    if (DialogResult.Yes == MessageBox.Show("Bạn có muốn sửa giáo viên này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                     {
-                        if (DialogResult.Yes == MessageBox.Show("Bạn có muốn thêm giáo viên này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
-                        {
-                            gv.ADDGiaoVien(txtHoTenGV.Text, cbGTGV.Text, dtpNgaySinhGV.Text, txtDiaChi.Text, txtSDT.Text, txtLuong.Text, cbMonHoc.SelectedValue.ToString());
-                            MessageBox.Show("Thêm thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            SetNull();
-                            Giao_Vien_Load(sender, e);
-                        }
+                        gv.Sua_GV(txtMaGV.Text, txtHoTenGV.Text, cbGTGV.Text, (dtpNgaySinhGV.Text), txtDiaChi.Text, txtSDT.Text, txtLuong.Text, cbMonHoc.SelectedValue.ToString());
+                        MessageBox.Show("Sửa thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        SetNull();
+                        Giao_Vien_Load(sender, e);
+                    }
+                }
+            }
+            else if (chon == 2)
+            {
+                if (txtHoTenGV.Text == "" || cbGTGV.Text == "" || txtDiaChi.Text == "" || txtSDT.Text == "" || cbMonHoc.Text == "" || dtpNgaySinhGV.Text == "" || txtLuong.Text == "")
+                    MessageBox.Show("Mời nhập đầy đủ thông tin!");
+                else
+                {
+                    if (DialogResult.Yes == MessageBox.Show("Bạn có muốn thêm giáo viên này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                    {
+                        gv.ADDGiaoVien(txtHoTenGV.Text, cbGTGV.Text, dtpNgaySinhGV.Text, txtDiaChi.Text, txtSDT.Text, txtLuong.Text, cbMonHoc.SelectedValue.ToString());
+                        MessageBox.Show("Thêm thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        SetNull();
+                        Giao_Vien_Load(sender, e);
                     }
                 }
             }
@@ -122,6 +135,14 @@ namespace QuanLiTHPT
                 Giao_Vien_Load(sender, e);
                 SetNull();
             }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            Mo();
+            //  SetNull();
+            txtTKGV.Enabled = cbTKGV.Enabled = true;
+            chon = 1;
         }
     }
 }

@@ -64,5 +64,17 @@ namespace QuanLiTHPT
             da.Fill(dt);
             return dt;
         }
+        public void Xoa_GV(string MaGV)
+        {
+            string sql = "Xoa_GV";
+            SqlConnection con = new SqlConnection(ConnectDB.getconnect());
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaGV", MaGV);
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
+        }
     }
 }

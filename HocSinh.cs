@@ -55,5 +55,19 @@ namespace QuanLiTHPT
             da.Fill(dt);
             return dt;
         }
+
+        // Xóa
+        public void Xoa_HS(string MaHS)
+        {
+            string sql = "Xoa_HS";
+            SqlConnection con = new SqlConnection(ConnectDB.getconnect());
+            con.Open();
+            SqlCommand cmd = new SqlCommand(sql, con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaHS", MaHS);
+            cmd.ExecuteNonQuery();
+            cmd.Dispose();
+            con.Close();
+        }
     }
 }

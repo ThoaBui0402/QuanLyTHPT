@@ -108,5 +108,17 @@ namespace QuanLiTHPT
             else
                 dgvHocSinh.DataSource = tk.TKTenHocSinh(txtTK_HS.Text);
         }
+
+       
+        private void btnXoa_HS_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.Yes == MessageBox.Show("Bạn muốn xóa học sinh này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            {
+                hs.Xoa_HS(txtMa_HS.Text);
+                MessageBox.Show("Xóa thành công!");
+                Hoc_Sinh_Load(sender, e);
+                SetNull();
+            }
+        }
     }
 }

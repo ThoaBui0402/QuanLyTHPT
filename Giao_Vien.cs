@@ -35,14 +35,14 @@ namespace QuanLiTHPT
         }
         public void SetNull()
         {
-            txtMaGV.Text = txtHoTenGV.Text = txtDiaChi.Text = txtLuong.Text = cbGTGV.Text = cbMonHoc.Text = cbTKGV.Text = txtTKGV.Text = txtSDT.Text = "";
+            p.Text = txtHoTenGV.Text = txtDiaChi.Text = txtLuong.Text = cbGTGV.Text = cbMonHoc.Text = cbTKGV.Text = txtTKGV.Text = txtSDT.Text = "";
             dtpNgaySinhGV.Text = DateTime.Now.ToShortDateString();
         }
         private void dgvGiaoVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                txtMaGV.Text = dgvGiaoVien.Rows[e.RowIndex].Cells[0].Value.ToString();
+                p.Text = dgvGiaoVien.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtHoTenGV.Text = dgvGiaoVien.Rows[e.RowIndex].Cells[1].Value.ToString();
                 cbGTGV.Text = dgvGiaoVien.Rows[e.RowIndex].Cells[2].Value.ToString();
                 dtpNgaySinhGV.Text = dgvGiaoVien.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -115,13 +115,19 @@ namespace QuanLiTHPT
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+          
             if (DialogResult.Yes == MessageBox.Show("Bạn muốn xóa giáo viên này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
             {
-                gv.Xoa_GV(txtMaGV.Text);
+                gv.Xoa_GV(p.Text);
                 MessageBox.Show("Xóa thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Giao_Vien_Load(sender, e);
                 SetNull();
             }
+        }
+
+        private void p_TextChanged(object sender, EventArgs e)
+        {
+            if (p.Text == "") errorProvider1.SetError(p, "bạn chưa nhập mã giáo viên!");
         }
     }
 }

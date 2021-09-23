@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnHuy = new System.Windows.Forms.Button();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
@@ -51,7 +52,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtMaGV = new System.Windows.Forms.TextBox();
+            this.p = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvGiaoVien = new System.Windows.Forms.DataGridView();
@@ -63,9 +64,11 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGiaoVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -92,7 +95,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtMaGV);
+            this.groupBox1.Controls.Add(this.p);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -298,13 +301,14 @@
             this.label2.TabIndex = 23;
             this.label2.Text = "Họ Tên";
             // 
-            // txtMaGV
+            // p
             // 
-            this.txtMaGV.Enabled = false;
-            this.txtMaGV.Location = new System.Drawing.Point(115, 35);
-            this.txtMaGV.Name = "txtMaGV";
-            this.txtMaGV.Size = new System.Drawing.Size(177, 20);
-            this.txtMaGV.TabIndex = 22;
+            this.p.Enabled = false;
+            this.p.Location = new System.Drawing.Point(115, 35);
+            this.p.Name = "p";
+            this.p.Size = new System.Drawing.Size(177, 20);
+            this.p.TabIndex = 22;
+            this.p.TextChanged += new System.EventHandler(this.p_TextChanged);
             // 
             // label1
             // 
@@ -420,6 +424,10 @@
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Giao_Vien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,6 +443,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGiaoVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -462,7 +471,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtMaGV;
+        private System.Windows.Forms.TextBox p;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvGiaoVien;
         private System.Windows.Forms.TextBox txtDiaChi;
@@ -476,6 +485,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

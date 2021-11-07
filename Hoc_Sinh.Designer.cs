@@ -28,13 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hoc_Sinh));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnHuy = new System.Windows.Forms.Button();
-            this.btnLuu_HS = new System.Windows.Forms.Button();
-            this.btnXoa_HS = new System.Windows.Forms.Button();
-            this.btnSua_HS = new System.Windows.Forms.Button();
-            this.btnThem_HS = new System.Windows.Forms.Button();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpNgaySinh_HS = new System.Windows.Forms.DateTimePicker();
@@ -49,7 +44,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.txtMa_HS = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtTK_HS = new System.Windows.Forms.TextBox();
             this.cbTK_HS = new System.Windows.Forms.ComboBox();
@@ -62,19 +56,32 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnThem_HS = new System.Windows.Forms.Button();
+            this.btnSua_HS = new System.Windows.Forms.Button();
+            this.btnXoa_HS = new System.Windows.Forms.Button();
+            this.btnLuu_HS = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.groupBox4);
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.btnHuy);
+            this.groupBox1.Controls.Add(this.cbTK_HS);
+            this.groupBox1.Controls.Add(this.txtTK_HS);
+            this.groupBox1.Controls.Add(this.btnLuu_HS);
             this.groupBox1.Controls.Add(this.txtDiaChi);
+            this.groupBox1.Controls.Add(this.btnXoa_HS);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.btnSua_HS);
             this.groupBox1.Controls.Add(this.dtpNgaySinh_HS);
+            this.groupBox1.Controls.Add(this.btnThem_HS);
             this.groupBox1.Controls.Add(this.cbLop);
             this.groupBox1.Controls.Add(this.cbGT_HS);
             this.groupBox1.Controls.Add(this.txtPhuHuynh);
@@ -88,88 +95,17 @@
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(1311, 268);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(1311, 320);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.btnHuy);
-            this.groupBox4.Controls.Add(this.btnLuu_HS);
-            this.groupBox4.Controls.Add(this.btnXoa_HS);
-            this.groupBox4.Controls.Add(this.btnSua_HS);
-            this.groupBox4.Controls.Add(this.btnThem_HS);
-            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox4.Location = new System.Drawing.Point(851, 19);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox4.Size = new System.Drawing.Size(456, 245);
-            this.groupBox4.TabIndex = 65;
-            this.groupBox4.TabStop = false;
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Location = new System.Drawing.Point(241, 191);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(100, 42);
-            this.btnHuy.TabIndex = 70;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // btnLuu_HS
-            // 
-            this.btnLuu_HS.Location = new System.Drawing.Point(241, 132);
-            this.btnLuu_HS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnLuu_HS.Name = "btnLuu_HS";
-            this.btnLuu_HS.Size = new System.Drawing.Size(100, 42);
-            this.btnLuu_HS.TabIndex = 69;
-            this.btnLuu_HS.Text = "Lưu";
-            this.btnLuu_HS.UseVisualStyleBackColor = true;
-            this.btnLuu_HS.Click += new System.EventHandler(this.btnLuu_HS_Click);
-            // 
-            // btnXoa_HS
-            // 
-            this.btnXoa_HS.Location = new System.Drawing.Point(241, 73);
-            this.btnXoa_HS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnXoa_HS.Name = "btnXoa_HS";
-            this.btnXoa_HS.Size = new System.Drawing.Size(100, 42);
-            this.btnXoa_HS.TabIndex = 68;
-            this.btnXoa_HS.Text = "Xóa";
-            this.btnXoa_HS.UseVisualStyleBackColor = true;
-            this.btnXoa_HS.Click += new System.EventHandler(this.btnXoa_HS_Click);
-            // 
-            // btnSua_HS
-            // 
-            this.btnSua_HS.Location = new System.Drawing.Point(116, 132);
-            this.btnSua_HS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnSua_HS.Name = "btnSua_HS";
-            this.btnSua_HS.Size = new System.Drawing.Size(100, 42);
-            this.btnSua_HS.TabIndex = 67;
-            this.btnSua_HS.Text = "Sửa";
-            this.btnSua_HS.UseVisualStyleBackColor = true;
-            this.btnSua_HS.Click += new System.EventHandler(this.btnSua_HS_Click);
-            // 
-            // btnThem_HS
-            // 
-            this.btnThem_HS.Location = new System.Drawing.Point(116, 73);
-            this.btnThem_HS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnThem_HS.Name = "btnThem_HS";
-            this.btnThem_HS.Size = new System.Drawing.Size(100, 42);
-            this.btnThem_HS.TabIndex = 66;
-            this.btnThem_HS.Text = "Thêm";
-            this.btnThem_HS.UseVisualStyleBackColor = true;
-            this.btnThem_HS.Click += new System.EventHandler(this.btnThem_HS_Click);
             // 
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(535, 142);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(235, 22);
             this.txtDiaChi.TabIndex = 64;
@@ -188,7 +124,7 @@
             // 
             this.dtpNgaySinh_HS.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgaySinh_HS.Location = new System.Drawing.Point(535, 87);
-            this.dtpNgaySinh_HS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpNgaySinh_HS.Margin = new System.Windows.Forms.Padding(4);
             this.dtpNgaySinh_HS.Name = "dtpNgaySinh_HS";
             this.dtpNgaySinh_HS.Size = new System.Drawing.Size(235, 22);
             this.dtpNgaySinh_HS.TabIndex = 54;
@@ -197,7 +133,7 @@
             // 
             this.cbLop.FormattingEnabled = true;
             this.cbLop.Location = new System.Drawing.Point(143, 212);
-            this.cbLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbLop.Margin = new System.Windows.Forms.Padding(4);
             this.cbLop.Name = "cbLop";
             this.cbLop.Size = new System.Drawing.Size(235, 24);
             this.cbLop.TabIndex = 53;
@@ -209,7 +145,7 @@
             "Nam",
             "Nu"});
             this.cbGT_HS.Location = new System.Drawing.Point(143, 151);
-            this.cbGT_HS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbGT_HS.Margin = new System.Windows.Forms.Padding(4);
             this.cbGT_HS.Name = "cbGT_HS";
             this.cbGT_HS.Size = new System.Drawing.Size(235, 24);
             this.cbGT_HS.TabIndex = 52;
@@ -217,7 +153,7 @@
             // txtPhuHuynh
             // 
             this.txtPhuHuynh.Location = new System.Drawing.Point(535, 33);
-            this.txtPhuHuynh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhuHuynh.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhuHuynh.Name = "txtPhuHuynh";
             this.txtPhuHuynh.Size = new System.Drawing.Size(235, 22);
             this.txtPhuHuynh.TabIndex = 51;
@@ -225,7 +161,7 @@
             // txtHoTen_HS
             // 
             this.txtHoTen_HS.Location = new System.Drawing.Point(143, 92);
-            this.txtHoTen_HS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHoTen_HS.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoTen_HS.Name = "txtHoTen_HS";
             this.txtHoTen_HS.Size = new System.Drawing.Size(235, 22);
             this.txtHoTen_HS.TabIndex = 50;
@@ -284,7 +220,7 @@
             // 
             this.txtMa_HS.Enabled = false;
             this.txtMa_HS.Location = new System.Drawing.Point(143, 33);
-            this.txtMa_HS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMa_HS.Margin = new System.Windows.Forms.Padding(4);
             this.txtMa_HS.Name = "txtMa_HS";
             this.txtMa_HS.Size = new System.Drawing.Size(235, 22);
             this.txtMa_HS.TabIndex = 44;
@@ -299,24 +235,10 @@
             this.label16.TabIndex = 43;
             this.label16.Text = "Mã HS";
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.txtTK_HS);
-            this.groupBox3.Controls.Add(this.cbTK_HS);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox3.Location = new System.Drawing.Point(0, 268);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(1311, 62);
-            this.groupBox3.TabIndex = 66;
-            this.groupBox3.TabStop = false;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(48, 33);
+            this.label9.Location = new System.Drawing.Point(74, 273);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 17);
@@ -325,8 +247,8 @@
             // 
             // txtTK_HS
             // 
-            this.txtTK_HS.Location = new System.Drawing.Point(453, 25);
-            this.txtTK_HS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTK_HS.Location = new System.Drawing.Point(577, 268);
+            this.txtTK_HS.Margin = new System.Windows.Forms.Padding(4);
             this.txtTK_HS.Name = "txtTK_HS";
             this.txtTK_HS.Size = new System.Drawing.Size(316, 22);
             this.txtTK_HS.TabIndex = 64;
@@ -338,8 +260,8 @@
             this.cbTK_HS.Items.AddRange(new object[] {
             "Mã",
             "Họ Tên"});
-            this.cbTK_HS.Location = new System.Drawing.Point(143, 23);
-            this.cbTK_HS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbTK_HS.Location = new System.Drawing.Point(215, 270);
+            this.cbTK_HS.Margin = new System.Windows.Forms.Padding(4);
             this.cbTK_HS.Name = "cbTK_HS";
             this.cbTK_HS.Size = new System.Drawing.Size(235, 24);
             this.cbTK_HS.TabIndex = 63;
@@ -348,17 +270,17 @@
             // 
             this.groupBox2.Controls.Add(this.dgvHocSinh);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 330);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(0, 320);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(1311, 276);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(1311, 286);
             this.groupBox2.TabIndex = 67;
             this.groupBox2.TabStop = false;
             // 
             // dgvHocSinh
             // 
-            this.dgvHocSinh.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dgvHocSinh.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvHocSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHocSinh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -370,12 +292,12 @@
             this.Column7});
             this.dgvHocSinh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHocSinh.Location = new System.Drawing.Point(4, 19);
-            this.dgvHocSinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvHocSinh.Margin = new System.Windows.Forms.Padding(4);
             this.dgvHocSinh.Name = "dgvHocSinh";
             this.dgvHocSinh.ReadOnly = true;
             this.dgvHocSinh.RowHeadersWidth = 51;
             this.dgvHocSinh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHocSinh.Size = new System.Drawing.Size(1303, 253);
+            this.dgvHocSinh.Size = new System.Drawing.Size(1303, 263);
             this.dgvHocSinh.TabIndex = 0;
             this.dgvHocSinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHocSinh_CellClick);
             // 
@@ -442,24 +364,92 @@
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             // 
+            // btnThem_HS
+            // 
+            this.btnThem_HS.Image = ((System.Drawing.Image)(resources.GetObject("btnThem_HS.Image")));
+            this.btnThem_HS.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnThem_HS.Location = new System.Drawing.Point(1024, 67);
+            this.btnThem_HS.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem_HS.Name = "btnThem_HS";
+            this.btnThem_HS.Size = new System.Drawing.Size(85, 42);
+            this.btnThem_HS.TabIndex = 66;
+            this.btnThem_HS.Text = "Thêm";
+            this.btnThem_HS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThem_HS.UseVisualStyleBackColor = true;
+            this.btnThem_HS.Click += new System.EventHandler(this.btnThem_HS_Click);
+            // 
+            // btnSua_HS
+            // 
+            this.btnSua_HS.Image = ((System.Drawing.Image)(resources.GetObject("btnSua_HS.Image")));
+            this.btnSua_HS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua_HS.Location = new System.Drawing.Point(1024, 138);
+            this.btnSua_HS.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSua_HS.Name = "btnSua_HS";
+            this.btnSua_HS.Size = new System.Drawing.Size(85, 42);
+            this.btnSua_HS.TabIndex = 67;
+            this.btnSua_HS.Text = "Sửa";
+            this.btnSua_HS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSua_HS.UseVisualStyleBackColor = true;
+            this.btnSua_HS.Click += new System.EventHandler(this.btnSua_HS_Click);
+            // 
+            // btnXoa_HS
+            // 
+            this.btnXoa_HS.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa_HS.Image")));
+            this.btnXoa_HS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa_HS.Location = new System.Drawing.Point(1168, 66);
+            this.btnXoa_HS.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa_HS.Name = "btnXoa_HS";
+            this.btnXoa_HS.Size = new System.Drawing.Size(85, 42);
+            this.btnXoa_HS.TabIndex = 68;
+            this.btnXoa_HS.Text = "Xóa";
+            this.btnXoa_HS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnXoa_HS.UseVisualStyleBackColor = true;
+            this.btnXoa_HS.Click += new System.EventHandler(this.btnXoa_HS_Click);
+            // 
+            // btnLuu_HS
+            // 
+            this.btnLuu_HS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLuu_HS.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu_HS.Image")));
+            this.btnLuu_HS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLuu_HS.Location = new System.Drawing.Point(1168, 135);
+            this.btnLuu_HS.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLuu_HS.Name = "btnLuu_HS";
+            this.btnLuu_HS.Size = new System.Drawing.Size(85, 42);
+            this.btnLuu_HS.TabIndex = 69;
+            this.btnLuu_HS.Text = "Lưu";
+            this.btnLuu_HS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLuu_HS.UseVisualStyleBackColor = true;
+            this.btnLuu_HS.Click += new System.EventHandler(this.btnLuu_HS_Click);
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
+            this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHuy.Location = new System.Drawing.Point(1168, 194);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(85, 42);
+            this.btnHuy.TabIndex = 70;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
             // Hoc_Sinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1311, 606);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Hoc_Sinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Học Sinh";
             this.Load += new System.EventHandler(this.Hoc_Sinh_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHocSinh)).EndInit();
             this.ResumeLayout(false);
@@ -483,13 +473,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button btnHuy;
-        private System.Windows.Forms.Button btnLuu_HS;
-        private System.Windows.Forms.Button btnXoa_HS;
-        private System.Windows.Forms.Button btnSua_HS;
-        private System.Windows.Forms.Button btnThem_HS;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtTK_HS;
         private System.Windows.Forms.ComboBox cbTK_HS;
@@ -502,5 +485,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.Button btnLuu_HS;
+        private System.Windows.Forms.Button btnXoa_HS;
+        private System.Windows.Forms.Button btnSua_HS;
+        private System.Windows.Forms.Button btnThem_HS;
+        private System.Windows.Forms.Button btnHuy;
     }
 }

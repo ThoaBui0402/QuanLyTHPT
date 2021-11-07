@@ -46,3 +46,16 @@ D:\QLTHPT_mklam\QuanLyTHPT\obj\Debug\QuanLiTHPT.csproj.GenerateResource.cache
 D:\QLTHPT_mklam\QuanLyTHPT\obj\Debug\QuanLiTHPT.csproj.CoreCompileInputs.cache
 D:\QLTHPT_mklam\QuanLyTHPT\obj\Debug\QuanLiTHPT.exe
 D:\QLTHPT_mklam\QuanLyTHPT\obj\Debug\QuanLiTHPT.pdb
+D:\ThucTapNhom\QuanLyTHPT\bin\Debug\QuanLiTHPT.exe.config
+D:\ThucTapNhom\QuanLyTHPT\bin\Debug\QuanLiTHPT.exe
+D:\ThucTapNhom\QuanLyTHPT\bin\Debug\QuanLiTHPT.pdb
+D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.csproj.AssemblyReference.cache
+D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.Form1.resources
+D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.frmDangNhap.resources
+D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.Giao_Vien.resources
+D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.Hoc_Sinh.resources
+D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.Properties.Resources.resources
+D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.csproj.GenerateResource.cache
+D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.csproj.CoreCompileInputs.cache
+D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.exe
+D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.pdb

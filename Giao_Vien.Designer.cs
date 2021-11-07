@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Giao_Vien));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnHuy = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtTKGV = new System.Windows.Forms.TextBox();
             this.cbTKGV = new System.Windows.Forms.ComboBox();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
             this.dtpNgaySinhGV = new System.Windows.Forms.DateTimePicker();
             this.cbMonHoc = new System.Windows.Forms.ComboBox();
             this.cbGTGV = new System.Windows.Forms.ComboBox();
@@ -70,16 +71,19 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Azure;
+            this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.groupBox1.Controls.Add(this.btnHuy);
+            this.groupBox1.Controls.Add(this.btnLuu);
+            this.groupBox1.Controls.Add(this.btnSua);
+            this.groupBox1.Controls.Add(this.btnXoa);
+            this.groupBox1.Controls.Add(this.btnThem);
             this.groupBox1.Controls.Add(this.txtDiaChi);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtTKGV);
             this.groupBox1.Controls.Add(this.cbTKGV);
-            this.groupBox1.Controls.Add(this.btnLuu);
-            this.groupBox1.Controls.Add(this.btnXoa);
-            this.groupBox1.Controls.Add(this.btnSua);
-            this.groupBox1.Controls.Add(this.btnThem);
             this.groupBox1.Controls.Add(this.dtpNgaySinhGV);
             this.groupBox1.Controls.Add(this.cbMonHoc);
             this.groupBox1.Controls.Add(this.cbGTGV);
@@ -96,28 +100,88 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(1332, 292);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(1332, 311);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // btnHuy
             // 
-            this.btnHuy.Location = new System.Drawing.Point(1191, 234);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
+            this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHuy.Location = new System.Drawing.Point(1191, 269);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(4);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(100, 42);
-            this.btnHuy.TabIndex = 45;
+            this.btnHuy.Size = new System.Drawing.Size(85, 42);
+            this.btnHuy.TabIndex = 72;
             this.btnHuy.Text = "Hủy";
+            this.btnHuy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click_1);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
+            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLuu.Location = new System.Drawing.Point(1191, 201);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(85, 42);
+            this.btnLuu.TabIndex = 71;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click_1);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSua.Location = new System.Drawing.Point(1064, 201);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(85, 42);
+            this.btnSua.TabIndex = 70;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click_1);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoa.Location = new System.Drawing.Point(1191, 131);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(85, 42);
+            this.btnXoa.TabIndex = 69;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click_1);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnThem.Location = new System.Drawing.Point(1064, 130);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(85, 42);
+            this.btnThem.TabIndex = 67;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
             // 
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(545, 151);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(235, 22);
             this.txtDiaChi.TabIndex = 44;
@@ -145,7 +209,7 @@
             // txtTKGV
             // 
             this.txtTKGV.Location = new System.Drawing.Point(552, 219);
-            this.txtTKGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTKGV.Margin = new System.Windows.Forms.Padding(4);
             this.txtTKGV.Name = "txtTKGV";
             this.txtTKGV.Size = new System.Drawing.Size(235, 22);
             this.txtTKGV.TabIndex = 40;
@@ -158,61 +222,17 @@
             "Mã",
             "Họ Tên"});
             this.cbTKGV.Location = new System.Drawing.Point(356, 219);
-            this.cbTKGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbTKGV.Margin = new System.Windows.Forms.Padding(4);
             this.cbTKGV.Name = "cbTKGV";
             this.cbTKGV.Size = new System.Drawing.Size(160, 24);
             this.cbTKGV.TabIndex = 39;
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(1191, 185);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(100, 42);
-            this.btnLuu.TabIndex = 38;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(1191, 135);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(100, 42);
-            this.btnXoa.TabIndex = 37;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(1064, 185);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(100, 42);
-            this.btnSua.TabIndex = 36;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(1064, 135);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(100, 42);
-            this.btnThem.TabIndex = 35;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // dtpNgaySinhGV
             // 
             this.dtpNgaySinhGV.CustomFormat = "MM/dd/yyyy";
             this.dtpNgaySinhGV.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgaySinhGV.Location = new System.Drawing.Point(545, 95);
-            this.dtpNgaySinhGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpNgaySinhGV.Margin = new System.Windows.Forms.Padding(4);
             this.dtpNgaySinhGV.Name = "dtpNgaySinhGV";
             this.dtpNgaySinhGV.Size = new System.Drawing.Size(160, 22);
             this.dtpNgaySinhGV.TabIndex = 34;
@@ -222,7 +242,7 @@
             // 
             this.cbMonHoc.FormattingEnabled = true;
             this.cbMonHoc.Location = new System.Drawing.Point(928, 43);
-            this.cbMonHoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbMonHoc.Margin = new System.Windows.Forms.Padding(4);
             this.cbMonHoc.Name = "cbMonHoc";
             this.cbMonHoc.Size = new System.Drawing.Size(235, 24);
             this.cbMonHoc.TabIndex = 33;
@@ -234,7 +254,7 @@
             "Nam",
             "Nu"});
             this.cbGTGV.Location = new System.Drawing.Point(153, 151);
-            this.cbGTGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbGTGV.Margin = new System.Windows.Forms.Padding(4);
             this.cbGTGV.Name = "cbGTGV";
             this.cbGTGV.Size = new System.Drawing.Size(160, 24);
             this.cbGTGV.TabIndex = 32;
@@ -242,7 +262,7 @@
             // txtLuong
             // 
             this.txtLuong.Location = new System.Drawing.Point(928, 94);
-            this.txtLuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLuong.Margin = new System.Windows.Forms.Padding(4);
             this.txtLuong.Name = "txtLuong";
             this.txtLuong.Size = new System.Drawing.Size(235, 22);
             this.txtLuong.TabIndex = 31;
@@ -250,7 +270,7 @@
             // txtSDT
             // 
             this.txtSDT.Location = new System.Drawing.Point(545, 43);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(235, 22);
             this.txtSDT.TabIndex = 30;
@@ -258,7 +278,7 @@
             // txtHoTenGV
             // 
             this.txtHoTenGV.Location = new System.Drawing.Point(153, 98);
-            this.txtHoTenGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHoTenGV.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoTenGV.Name = "txtHoTenGV";
             this.txtHoTenGV.Size = new System.Drawing.Size(235, 22);
             this.txtHoTenGV.TabIndex = 29;
@@ -327,7 +347,7 @@
             // 
             this.txtMaGV.Enabled = false;
             this.txtMaGV.Location = new System.Drawing.Point(153, 43);
-            this.txtMaGV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaGV.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaGV.Name = "txtMaGV";
             this.txtMaGV.Size = new System.Drawing.Size(235, 22);
             this.txtMaGV.TabIndex = 22;
@@ -346,17 +366,17 @@
             // 
             this.groupBox2.Controls.Add(this.dgvGiaoVien);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 292);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(0, 311);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(1332, 342);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(1332, 323);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
             // dgvGiaoVien
             // 
-            this.dgvGiaoVien.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dgvGiaoVien.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvGiaoVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGiaoVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -369,12 +389,12 @@
             this.Column8});
             this.dgvGiaoVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvGiaoVien.Location = new System.Drawing.Point(4, 19);
-            this.dgvGiaoVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvGiaoVien.Margin = new System.Windows.Forms.Padding(4);
             this.dgvGiaoVien.Name = "dgvGiaoVien";
             this.dgvGiaoVien.ReadOnly = true;
             this.dgvGiaoVien.RowHeadersWidth = 51;
             this.dgvGiaoVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGiaoVien.Size = new System.Drawing.Size(1324, 319);
+            this.dgvGiaoVien.Size = new System.Drawing.Size(1324, 300);
             this.dgvGiaoVien.TabIndex = 0;
             this.dgvGiaoVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGiaoVien_CellClick);
             // 
@@ -457,7 +477,7 @@
             this.ClientSize = new System.Drawing.Size(1332, 634);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Giao_Vien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giáo Viên";
@@ -477,10 +497,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTKGV;
         private System.Windows.Forms.ComboBox cbTKGV;
-        private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.DateTimePicker dtpNgaySinhGV;
         private System.Windows.Forms.ComboBox cbMonHoc;
         private System.Windows.Forms.ComboBox cbGTGV;
@@ -498,7 +514,6 @@
         private System.Windows.Forms.DataGridView dgvGiaoVien;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -507,6 +522,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnHuy;
     }
 }

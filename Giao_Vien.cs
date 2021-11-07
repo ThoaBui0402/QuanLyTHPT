@@ -58,14 +58,57 @@ namespace QuanLiTHPT
 
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        private void Giao_Vien_Load(object sender, EventArgs e)
+        {
+            KhoiTao();
+            dgvGiaoVien.DataSource = gv.Show();
+
+            cbMonHoc.DataSource = gv.LayThongTinMonHoc();
+            cbMonHoc.DisplayMember = "TenMon";
+            cbMonHoc.ValueMember = "MaMon";
+            cbMonHoc.SelectedValue = "MaMon";
+            chon = 0;
+        }
+
+        private void txtTKGV_TextChanged(object sender, EventArgs e)
+        {
+            if (cbTKGV.Text == "Mã")
+                dgvGiaoVien.DataSource = tk.TK_Ma_GiaoVien(txtTKGV.Text);
+            else
+                dgvGiaoVien.DataSource = tk.TKTenGiaoVien(txtTKGV.Text);
+        }
+
+       
+
+       
+
+        private void btnThem_Click_1(object sender, EventArgs e)
         {
             Mo();
             SetNull();
             chon = 2;
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
+        private void btnXoa_Click_1(object sender, EventArgs e)
+        {
+            if (DialogResult.Yes == MessageBox.Show("Bạn muốn xóa giáo viên này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+            {
+                gv.Xoa_GV(txtMaGV.Text);
+                MessageBox.Show("Xóa thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Giao_Vien_Load(sender, e);
+                SetNull();
+            }
+        }
+
+        private void btnSua_Click_1(object sender, EventArgs e)
+        {
+            Mo();
+            //  SetNull();
+            txtTKGV.Enabled = cbTKGV.Enabled = true;
+            chon = 1;
+        }
+
+        private void btnLuu_Click_1(object sender, EventArgs e)
         {
 
             if (chon == 1)
@@ -100,49 +143,10 @@ namespace QuanLiTHPT
             }
         }
 
-        private void btnHuy_Click(object sender, EventArgs e)
+        private void btnHuy_Click_1(object sender, EventArgs e)
         {
             Giao_Vien_Load(sender, e);
             SetNull();
-        }
-
-        private void Giao_Vien_Load(object sender, EventArgs e)
-        {
-            KhoiTao();
-            dgvGiaoVien.DataSource = gv.Show();
-
-            cbMonHoc.DataSource = gv.LayThongTinMonHoc();
-            cbMonHoc.DisplayMember = "TenMon";
-            cbMonHoc.ValueMember = "MaMon";
-            cbMonHoc.SelectedValue = "MaMon";
-            chon = 0;
-        }
-
-        private void txtTKGV_TextChanged(object sender, EventArgs e)
-        {
-            if (cbTKGV.Text == "Mã")
-                dgvGiaoVien.DataSource = tk.TK_Ma_GiaoVien(txtTKGV.Text);
-            else
-                dgvGiaoVien.DataSource = tk.TKTenGiaoVien(txtTKGV.Text);
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            if (DialogResult.Yes == MessageBox.Show("Bạn muốn xóa giáo viên này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
-            {
-                gv.Xoa_GV(txtMaGV.Text);
-                MessageBox.Show("Xóa thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Giao_Vien_Load(sender, e);
-                SetNull();
-            }
-        }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            Mo();
-            //  SetNull();
-            txtTKGV.Enabled = cbTKGV.Enabled = true;
-            chon = 1;
         }
     }
 }

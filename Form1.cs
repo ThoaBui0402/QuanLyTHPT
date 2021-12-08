@@ -47,6 +47,9 @@ namespace QuanLiTHPT
             /*frmHuongDan hd = new frmHuongDan();
             hd.Show();
             Hide();*/
+            HuongdanSD frm = new HuongdanSD();
+            frm.Show();
+            
         }
     }
 }

@@ -49,7 +49,6 @@ D:\QLTHPT_mklam\QuanLyTHPT\obj\Debug\QuanLiTHPT.pdb
 D:\ThucTapNhom\QuanLyTHPT\bin\Debug\QuanLiTHPT.exe.config
 D:\ThucTapNhom\QuanLyTHPT\bin\Debug\QuanLiTHPT.exe
 D:\ThucTapNhom\QuanLyTHPT\bin\Debug\QuanLiTHPT.pdb
-D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.csproj.AssemblyReference.cache
 D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.Form1.resources
 D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.frmDangNhap.resources
 D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.Giao_Vien.resources
@@ -75,3 +74,7 @@ D:\Ky1nam4\TTN\github\QuanLyTHPT\obj\Debug\QuanLiTHPT.pdb
 D:\Ky1nam4\TTN\github\QuanLyTHPT\bin\Debug\DevComponents.DotNetBar2.dll
 D:\Ky1nam4\TTN\github\QuanLyTHPT\obj\Debug\QuanLiTHPT.HuongdanSD.resources
 D:\Ky1nam4\TTN\github\QuanLyTHPT\obj\Debug\QuanLiTHPT.csproj.CopyComplete
+D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.HuongdanSD.resources
+D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.NguoiDung.resources
+D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.csproj.CopyComplete
+D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.csproj.AssemblyReference.cache

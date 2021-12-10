@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
+
 namespace QuanLiTHPT
 {
     class ConnectDB
@@ -13,8 +15,10 @@ namespace QuanLiTHPT
         static public String getconnect()
         {
           
-            return (@"Data Source=localhost\SQLEXPRESS01;Initial Catalog=TruongTHPT;Integrated Security=True");
+            return (@"Data Source=DESKTOP-VPF0AQ3;Initial Catalog=TruongTHPT;Integrated Security=True");
             
         }
+       
+          
     }
 }

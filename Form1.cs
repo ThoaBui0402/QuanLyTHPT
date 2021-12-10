@@ -51,5 +51,16 @@ namespace QuanLiTHPT
             frm.Show();
             
         }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            NguoiDung frm = new NguoiDung();
+            frm.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

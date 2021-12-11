@@ -12,6 +12,8 @@ namespace QuanLiTHPT
     class TaiKhoan
     {
         ConnectDB cn = new ConnectDB();
+
+
         public DataTable Show()
         {
             return LoadData("HienThi_NguoiDung");

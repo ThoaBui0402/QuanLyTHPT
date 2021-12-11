@@ -97,6 +97,7 @@ namespace QuanLiTHPT
             this.txtPass.BackColor = System.Drawing.Color.Azure;
             this.txtPass.Location = new System.Drawing.Point(214, 133);
             this.txtPass.Margin = new System.Windows.Forms.Padding(20);
+            this.txtPass.MaxLength = 50;
             this.txtPass.Multiline = true;
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
@@ -110,6 +111,7 @@ namespace QuanLiTHPT
             this.txtUserName.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtUserName.Location = new System.Drawing.Point(214, 78);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(15);
+            this.txtUserName.MaxLength = 50;
             this.txtUserName.Multiline = true;
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(276, 41);

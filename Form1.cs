@@ -12,21 +12,31 @@ namespace QuanLiTHPT
 {
     public partial class Form1 : Form
     {
+
+        string user = "", mk = "";
+        int laAdmin ;
         public Form1()
         {
             InitializeComponent();
             label1.BackColor = Color.Transparent;
         }
 
+        public Form1(string user, string mk, int laAdmin)
+        {
+            InitializeComponent();
+            this.user = user;
+            this.mk = mk;
+            this.laAdmin = laAdmin;
+        }
         private void giáoViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Giao_Vien gv = new Giao_Vien();
+            Giao_Vien gv = new Giao_Vien(user, mk, laAdmin);
             gv.Show();
         }
 
         private void họcSinhToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Hoc_Sinh hs = new Hoc_Sinh();
+            Hoc_Sinh hs = new Hoc_Sinh(user,mk,laAdmin);
             hs.Show();
         }
 
@@ -54,8 +64,11 @@ namespace QuanLiTHPT
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            NguoiDung frm = new NguoiDung();
-            frm.Show();
+            
+            
+                NguoiDung frm = new NguoiDung(user, mk, laAdmin);
+                frm.Show();
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)

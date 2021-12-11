@@ -12,10 +12,19 @@ namespace QuanLiTHPT
 {
     public partial class NguoiDung : Form
     {
-       
+    
         public NguoiDung()
         {
             InitializeComponent();
+        }
+        string user = "", mk = "";
+        int laAdmin;
+        public NguoiDung(string user, string mk, int laAdmin)
+        {
+            InitializeComponent();
+            this.user = user;
+            this.mk = mk;
+            this.laAdmin = laAdmin;
         }
         TaiKhoan nd = new TaiKhoan();
         
@@ -57,100 +66,139 @@ namespace QuanLiTHPT
 
         private void NguoiDung_Load(object sender, EventArgs e)
         {
+            
             KhoiTao();
             dataGridViewNguoiDung.DataSource = nd.Show();
             chon = 0;
-            
+     
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            Mo();
-            SetNull();
-            chon = 1;
-            DataTable dt = nd.LoadData("HienThi_NguoiDung");
-            comboBoxMaNV.Text = dt.Rows[0][0].ToString();
-        }
+            if (laAdmin == 1)
+            {
+                Mo();
+                SetNull();
+                chon = 1;
+                /*   DataTable dt = nd.LoadData("HienThi_NguoiDung");
+                   comboBoxMaNV.Text = dt.Rows[0][0].ToString();*/
+            }
+            else
+            {
+                MessageBox.Show("Người dùng là admin mới có quyền này");
+            }
+            }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            try
+            if (laAdmin == 1)
             {
-                if (nd.LoadData1("XemNguoiDung", "@Username", comboBoxMaNV.Text).Rows.Count == 0)
-                    MessageBox.Show("Không tìm thấy Nhân viên này");
-                else
+                try
                 {
-                    if (DialogResult.Yes == MessageBox.Show("Bạn có muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                    if (nd.LoadData1("XemNguoiDung", "@Username", comboBoxMaNV.Text).Rows.Count == 0)
+                        MessageBox.Show("Không tìm thấy Nhân viên này");
+                    else
                     {
-                        nd.Xoa("XoaNguoiDung", "@Username", comboBoxMaNV.Text);
-                        MessageBox.Show("Xóa thành công!");
-                        NguoiDung_Load(sender, e);
-                        SetNull();
+                        if (DialogResult.Yes == MessageBox.Show("Bạn có muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                        {
+                            nd.Xoa("XoaNguoiDung", "@Username", comboBoxMaNV.Text);
+                            MessageBox.Show("Xóa thành công!");
+                            NguoiDung_Load(sender, e);
+                            SetNull();
+                        }
                     }
-                }
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Người dùng là admin mới có quyền này");
             }
-        }
+
+
+
+}
  
         private void btnSua_Click(object sender, EventArgs e)
         {
-            Mo();
-            //  SetNull();
-            comboBoxMaNV.Enabled = false;
-            chon = 2;
+            if (laAdmin == 1)
+            {
+                Mo();
+                //  SetNull();
+                comboBoxMaNV.Enabled = false;
+                chon = 2;
+            }
+            else
+            {
+                MessageBox.Show("Người dùng là admin mới có quyền này");
+            }
+
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (chon == 1) //Them
+            if (laAdmin == 1)
             {
-                if (nd.LoadData1("XemNguoiDung", "@Username", comboBoxMaNV.Text).Rows.Count > 0)
-                    MessageBox.Show("Tài khoản đã có trong danh sách");
-                else
-                {
-                    if (textMatKhau.Text == "" || comboBoxLaAdmin.Text == "")
-                        MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
-                    else
-                    {
-                        nd.NguoiDung_DB("ThemNguoiDung", comboBoxMaNV.Text, textMatKhau.Text, comboBoxLaAdmin.Text);
-                        MessageBox.Show("Thêm thành công");
-                        NguoiDung_Load(sender, e);
-                    }
-                }
 
-            }
-            else if (chon == 2) //Sua
-            {
-                if (nd.LoadData1("XemNguoiDung", "@Username", comboBoxMaNV.Text).Rows.Count == 0)
-                    MessageBox.Show("Tài khoản này chưa có trong danh sách");
-                else
+                if (chon == 1) //Them
                 {
-                    if (textMatKhau.Text == "" || comboBoxLaAdmin.Text == "")
-                        MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                    if (nd.LoadData1("XemNguoiDung", "@Username", comboBoxMaNV.Text).Rows.Count > 0)
+                        MessageBox.Show("Tài khoản đã có trong danh sách");
                     else
                     {
-                        if (DialogResult.Yes == MessageBox.Show("Bạn có muốn sửa tài khoản này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                        if (textMatKhau.Text == "" || comboBoxLaAdmin.Text == "")
+                            MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                        else
                         {
-                            nd.NguoiDung_DB("SuaNguoiDung", comboBoxMaNV.Text, textMatKhau.Text, comboBoxLaAdmin.Text);
-                            MessageBox.Show("Sửa thành công");
+                            nd.NguoiDung_DB("ThemNguoiDung", comboBoxMaNV.Text, textMatKhau.Text, comboBoxLaAdmin.Text);
+                            MessageBox.Show("Thêm thành công");
                             NguoiDung_Load(sender, e);
                         }
                     }
-                }
 
+                }
+                else if (chon == 2) //Sua
+                {
+                    if (nd.LoadData1("XemNguoiDung", "@Username", comboBoxMaNV.Text).Rows.Count == 0)
+                        MessageBox.Show("Tài khoản này chưa có trong danh sách");
+                    else
+                    {
+                        if (textMatKhau.Text == "" || comboBoxLaAdmin.Text == "")
+                            MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                        else
+                        {
+                            if (DialogResult.Yes == MessageBox.Show("Bạn có muốn sửa tài khoản này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                            {
+                                nd.NguoiDung_DB("SuaNguoiDung", comboBoxMaNV.Text, textMatKhau.Text, comboBoxLaAdmin.Text);
+                                MessageBox.Show("Sửa thành công");
+                                NguoiDung_Load(sender, e);
+                            }
+                        }
+                    }
+                }
             }
+            else
+            {
+                MessageBox.Show("Người dùng là admin mới có quyền này");
+            }
+
+
         }
+        
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            NguoiDung_Load(sender, e);
-            SetNull();
+           
+                NguoiDung_Load(sender, e);
+                SetNull();
+          
+
         }
-       
+
         private void comboBoxMaNV_SelectedIndexChanged(object sender, EventArgs e)
         {
 

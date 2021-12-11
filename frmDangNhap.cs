@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,14 +17,21 @@ namespace QuanLiTHPT
         {
             InitializeComponent();
         }
-        DangNhap dn = new DangNhap();
+      
+       
+
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if (dn.DangNhapHT(txtUserName.Text, txtPass.Text) == true)
+            string sql = "SELECT * FROM tblUser WHERE Username='" + txtUserName.Text + "' AND Password='" + txtPass.Text + "'";
+            SqlConnection con = new SqlConnection(ConnectDB.getconnect());
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(sql, con);
+
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
             {
-                // bool x = false;
                 MessageBox.Show("Bạn đăng nhập thành công ^^", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Form1 frm1 = new Form1();
+                Form1 frm1 = new Form1(dt.Rows[0][0].ToString(), dt.Rows[0][1].ToString(), Int32.Parse(dt.Rows[0][2].ToString()));
                 frm1.Show();
                 Hide();
             }

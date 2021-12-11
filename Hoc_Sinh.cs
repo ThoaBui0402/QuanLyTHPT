@@ -11,15 +11,26 @@ using System.Windows.Forms;
 
 namespace QuanLiTHPT
 {
+
     public partial class Hoc_Sinh : Form
     {
+        string user = "", mk = "";
+        int laAdmin;
         public Hoc_Sinh()
         {
             InitializeComponent();
         }
+        public Hoc_Sinh(string user, string mk, int laAdmin)
+        {
+            InitializeComponent();
+            this.user = user;
+            this.mk = mk;
+            this.laAdmin = laAdmin; 
+        }
         HocSinh hs = new HocSinh();
         int chon;
         TimKiem tk = new TimKiem();
+
         public void KhoiTao()
         {
             txtHoTen_HS.Enabled = txtPhuHuynh.Enabled = cbGT_HS.Enabled = cbLop.Enabled = dtpNgaySinh_HS.Enabled = txtDiaChi.Enabled = false;
@@ -58,36 +69,43 @@ namespace QuanLiTHPT
 
         private void btnLuu_HS_Click(object sender, EventArgs e)
         {
-            if (chon == 1)
+            if (laAdmin == 1)
             {
-                if (txtHoTen_HS.Text == "" || cbGT_HS.Text == "" || txtDiaChi.Text == "" || txtPhuHuynh.Text == "" || cbLop.Text == "" || dtpNgaySinh_HS.Text == "")
-                    MessageBox.Show("Mời nhập đầy đủ thông tin!");
-                else
+                if (chon == 1)
                 {
-                    if (DialogResult.Yes == MessageBox.Show("Bạn có muốn sửa học sinh này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                    if (txtHoTen_HS.Text == "" || cbGT_HS.Text == "" || txtDiaChi.Text == "" || txtPhuHuynh.Text == "" || cbLop.Text == "" || dtpNgaySinh_HS.Text == "")
+                        MessageBox.Show("Mời nhập đầy đủ thông tin!");
+                    else
                     {
-                        hs.Sua_HS(txtMa_HS.Text, txtHoTen_HS.Text, cbGT_HS.Text, dtpNgaySinh_HS.Text, txtDiaChi.Text, txtPhuHuynh.Text, cbLop.SelectedValue.ToString());
-                        MessageBox.Show("Sửa thành công!");
-                        SetNull();
-                        Hoc_Sinh_Load(sender, e);
+                        if (DialogResult.Yes == MessageBox.Show("Bạn có muốn sửa học sinh này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                        {
+                            hs.Sua_HS(txtMa_HS.Text, txtHoTen_HS.Text, cbGT_HS.Text, dtpNgaySinh_HS.Text, txtDiaChi.Text, txtPhuHuynh.Text, cbLop.SelectedValue.ToString());
+                            MessageBox.Show("Sửa thành công!");
+                            SetNull();
+                            Hoc_Sinh_Load(sender, e);
+                        }
+                    }
+                }
+                else
+                if (chon == 2)
+                {
+                    if (txtHoTen_HS.Text == "" || cbGT_HS.Text == "" || txtDiaChi.Text == "" || txtPhuHuynh.Text == "" || cbLop.Text == "" || dtpNgaySinh_HS.Text == "")
+                        MessageBox.Show("Mời nhập đầy đủ thông tin!");
+                    else
+                    {
+                        if (DialogResult.Yes == MessageBox.Show("Bạn có muốn thêm học sinh này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                        {
+                            hs.ThemHocSinh(txtHoTen_HS.Text, cbGT_HS.Text, DateTime.Parse(dtpNgaySinh_HS.Text), txtDiaChi.Text, txtPhuHuynh.Text, cbLop.SelectedValue.ToString());
+                            MessageBox.Show("Thêm thành công!");
+                            SetNull();
+                            Hoc_Sinh_Load(sender, e);
+                        }
                     }
                 }
             }
             else
-            if (chon == 2)
             {
-                if (txtHoTen_HS.Text == "" || cbGT_HS.Text == "" || txtDiaChi.Text == "" || txtPhuHuynh.Text == "" || cbLop.Text == "" || dtpNgaySinh_HS.Text == "")
-                    MessageBox.Show("Mời nhập đầy đủ thông tin!");
-                else
-                {
-                    if (DialogResult.Yes == MessageBox.Show("Bạn có muốn thêm học sinh này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
-                    {
-                        hs.ThemHocSinh(txtHoTen_HS.Text, cbGT_HS.Text, DateTime.Parse(dtpNgaySinh_HS.Text), txtDiaChi.Text, txtPhuHuynh.Text, cbLop.SelectedValue.ToString());
-                        MessageBox.Show("Thêm thành công!");
-                        SetNull();
-                        Hoc_Sinh_Load(sender, e);
-                    }
-                }
+                MessageBox.Show("Người dùng là admin mới có quyền này");
             }
 
         }
@@ -106,15 +124,24 @@ namespace QuanLiTHPT
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            Hoc_Sinh_Load(sender, e);
-            SetNull();
+            
+                Hoc_Sinh_Load(sender, e);
+                SetNull();
+            
         }
 
         private void btnThem_HS_Click(object sender, EventArgs e)
         {
-            Mo();
-            SetNull();
-            chon = 2;
+            if (laAdmin == 1)
+            {
+                Mo();
+                SetNull();
+                chon = 2;
+            }
+            else
+            {
+                MessageBox.Show("Người dùng là admin mới có quyền này");
+            }
         }
 
         private void txtTK_HS_TextChanged(object sender, EventArgs e)
@@ -127,22 +154,37 @@ namespace QuanLiTHPT
 
        
         private void btnXoa_HS_Click(object sender, EventArgs e)
+
         {
-            if (DialogResult.Yes == MessageBox.Show("Bạn muốn xóa học sinh này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            if (laAdmin == 1)
             {
-                hs.Xoa_HS(txtMa_HS.Text);
-                MessageBox.Show("Xóa thành công!");
-                Hoc_Sinh_Load(sender, e);
-                SetNull();
+                if (DialogResult.Yes == MessageBox.Show("Bạn muốn xóa học sinh này?", "THÔNG BÁO", MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                {
+                    hs.Xoa_HS(txtMa_HS.Text);
+                    MessageBox.Show("Xóa thành công!");
+                    Hoc_Sinh_Load(sender, e);
+                    SetNull();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Người dùng là admin mới có quyền này");
             }
         }
 
         private void btnSua_HS_Click(object sender, EventArgs e)
         {
-            Mo();
-            SetNull();
-            txtMa_HS.Enabled = false;
-            chon = 1;
+            if (laAdmin == 1)
+            {
+                Mo();
+                SetNull();
+                txtMa_HS.Enabled = false;
+                chon = 1;
+            }
+            else
+            {
+                MessageBox.Show("Người dùng là admin mới có quyền này");
+            }
         }
     }
 }

@@ -12,7 +12,6 @@ D:\ThucTapNhom\QuanLiTHPT\obj\Debug\QuanLiTHPT.pdb
 C:\Users\asus\Desktop\TTNhom\THPN_New1\THPT_New2\QuanLyTHPT\bin\Debug\QuanLiTHPT.exe.config
 C:\Users\asus\Desktop\TTNhom\THPN_New1\THPT_New2\QuanLyTHPT\bin\Debug\QuanLiTHPT.exe
 C:\Users\asus\Desktop\TTNhom\THPN_New1\THPT_New2\QuanLyTHPT\bin\Debug\QuanLiTHPT.pdb
-C:\Users\asus\Desktop\TTNhom\THPN_New1\THPT_New2\QuanLyTHPT\obj\Debug\QuanLiTHPT.csprojAssemblyReference.cache
 C:\Users\asus\Desktop\TTNhom\THPN_New1\THPT_New2\QuanLyTHPT\obj\Debug\QuanLiTHPT.Form1.resources
 C:\Users\asus\Desktop\TTNhom\THPN_New1\THPT_New2\QuanLyTHPT\obj\Debug\QuanLiTHPT.frmDangNhap.resources
 C:\Users\asus\Desktop\TTNhom\THPN_New1\THPT_New2\QuanLyTHPT\obj\Debug\QuanLiTHPT.Properties.Resources.resources
@@ -46,3 +45,7 @@ D:\QLTHPT_mklam\QuanLyTHPT\obj\Debug\QuanLiTHPT.csproj.GenerateResource.cache
 D:\QLTHPT_mklam\QuanLyTHPT\obj\Debug\QuanLiTHPT.csproj.CoreCompileInputs.cache
 D:\QLTHPT_mklam\QuanLyTHPT\obj\Debug\QuanLiTHPT.exe
 D:\QLTHPT_mklam\QuanLyTHPT\obj\Debug\QuanLiTHPT.pdb
+C:\Users\asus\Desktop\TTNhom\THPN_New1\THPT_New2\QuanLyTHPT\obj\Debug\QuanLiTHPT.Giao_Vien.resources
+C:\Users\asus\Desktop\TTNhom\THPN_New1\THPT_New2\QuanLyTHPT\obj\Debug\QuanLiTHPT.Hoc_Sinh.resources
+C:\Users\asus\Desktop\TTNhom\THPN_New1\THPT_New2\QuanLyTHPT\obj\Debug\QuanLiTHPT.ThongTinGD.resources
+C:\Users\asus\Desktop\TTNhom\THPN_New1\THPT_New2\QuanLyTHPT\obj\Debug\QuanLiTHPT.csprojAssemblyReference.cache

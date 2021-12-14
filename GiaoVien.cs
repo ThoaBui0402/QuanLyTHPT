@@ -64,7 +64,7 @@ namespace QuanLiTHPT
             da.Fill(dt);
             return dt;
         }
-        public void Sua_GV(string MaGV, string HoTen, string GT, string NgaySinh, string DiaChi, string SDT, string Luong, string Mon)
+        public void Sua_GV(string MaGV, string HoTen, string GT, string NgaySinh, string DiaChi, string SDT, string Luong, string Monhoc)
         {
             string sql = "Sua_GV";
             SqlConnection con = new SqlConnection(ConnectDB.getconnect());
@@ -79,7 +79,7 @@ namespace QuanLiTHPT
             cmd.Parameters.AddWithValue("@DiaChi", DiaChi);
             cmd.Parameters.AddWithValue("@SDT", int.Parse(SDT));
             cmd.Parameters.AddWithValue("@Luong", int.Parse(Luong));
-            cmd.Parameters.AddWithValue("@MaMon", Mon);
+            cmd.Parameters.AddWithValue("@MaMon", Monhoc);
 
             cmd.ExecuteNonQuery();
             cmd.Dispose();

@@ -78,3 +78,9 @@ D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.HuongdanSD.resources
 D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.NguoiDung.resources
 D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.csproj.CopyComplete
 D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.csproj.AssemblyReference.cache
+C:\Users\asus\Desktop\TTNhom\THPN_New1\THPT_New2\QuanLyTHPT\obj\Debug\QuanLiTHPT.Giao_Vien.resources
+C:\Users\asus\Desktop\TTNhom\THPN_New1\THPT_New2\QuanLyTHPT\obj\Debug\QuanLiTHPT.Hoc_Sinh.resources
+C:\Users\asus\Desktop\TTNhom\THPN_New1\THPT_New2\QuanLyTHPT\obj\Debug\QuanLiTHPT.HuongdanSD.resources
+C:\Users\asus\Desktop\TTNhom\THPN_New1\THPT_New2\QuanLyTHPT\obj\Debug\QuanLiTHPT.NguoiDung.resources
+C:\Users\asus\Desktop\TTNhom\THPN_New1\THPT_New2\QuanLyTHPT\obj\Debug\QuanLiTHPT.ThongTinGD.resources
+C:\Users\asus\Desktop\TTNhom\THPN_New1\THPT_New2\QuanLyTHPT\obj\Debug\QuanLiTHPT.csproj.CopyComplete

@@ -15,7 +15,7 @@ namespace QuanLiTHPT
         static public String getconnect()
         {
           
-            return (@"Data Source=DESKTOP-VPF0AQ3;Initial Catalog=TruongTHPT;Integrated Security=True");
+            return (@"Data Source=DESKTOP-J2GH96M\SQL15;Initial Catalog=TruongTHPT;Integrated Security=True");
             
         }
        

@@ -78,3 +78,4 @@ D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.HuongdanSD.resources
 D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.NguoiDung.resources
 D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.csproj.CopyComplete
 D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.csproj.AssemblyReference.cache
+D:\ThucTapNhom\QuanLyTHPT\obj\Debug\QuanLiTHPT.QLTTGD.resources

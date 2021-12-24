@@ -30,7 +30,6 @@ namespace QuanLiTHPT
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangNhap));
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnThoat = new System.Windows.Forms.Button();
@@ -49,7 +48,7 @@ namespace QuanLiTHPT
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(142, 21);
+            this.label3.Location = new System.Drawing.Point(91, 22);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(289, 26);
@@ -59,7 +58,7 @@ namespace QuanLiTHPT
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.BackColor = System.Drawing.Color.Teal;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(43, 133);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -70,8 +69,8 @@ namespace QuanLiTHPT
             // 
             // btnThoat
             // 
-            this.btnThoat.BackColor = System.Drawing.Color.LightSalmon;
-            this.btnThoat.Location = new System.Drawing.Point(377, 204);
+            this.btnThoat.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnThoat.Location = new System.Drawing.Point(331, 194);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(100, 53);
@@ -82,8 +81,8 @@ namespace QuanLiTHPT
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.BackColor = System.Drawing.Color.LightSalmon;
-            this.btnDangNhap.Location = new System.Drawing.Point(211, 204);
+            this.btnDangNhap.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnDangNhap.Location = new System.Drawing.Point(161, 194);
             this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(129, 53);
@@ -94,34 +93,34 @@ namespace QuanLiTHPT
             // 
             // txtPass
             // 
-            this.txtPass.BackColor = System.Drawing.Color.Azure;
+            this.txtPass.BackColor = System.Drawing.Color.White;
             this.txtPass.Location = new System.Drawing.Point(214, 133);
             this.txtPass.Margin = new System.Windows.Forms.Padding(20);
             this.txtPass.MaxLength = 50;
             this.txtPass.Multiline = true;
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(276, 41);
+            this.txtPass.Size = new System.Drawing.Size(241, 41);
             this.txtPass.TabIndex = 20;
             this.txtPass.Text = "admin";
             // 
             // txtUserName
             // 
-            this.txtUserName.BackColor = System.Drawing.Color.Azure;
+            this.txtUserName.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtUserName.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtUserName.Location = new System.Drawing.Point(214, 78);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(15);
             this.txtUserName.MaxLength = 50;
             this.txtUserName.Multiline = true;
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(276, 41);
+            this.txtUserName.Size = new System.Drawing.Size(241, 41);
             this.txtUserName.TabIndex = 19;
             this.txtUserName.Text = "admin";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.BackColor = System.Drawing.Color.Teal;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(43, 86);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -134,10 +133,9 @@ namespace QuanLiTHPT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.Teal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(618, 330);
+            this.ClientSize = new System.Drawing.Size(519, 274);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnThoat);

@@ -42,8 +42,8 @@ namespace QuanLiTHPT
 
         private void thôngTinGiảngDạyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*QLGD frm = new QLGD();
-            frm.Show();*/
+            QLTTGD frm = new QLTTGD(user, mk, laAdmin);
+            frm.Show();
         }
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
